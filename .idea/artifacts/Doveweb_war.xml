@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Doveweb:war">
+    <output-path>$PROJECT_DIR$/Doveweb/target</output-path>
+    <root id="archive" name="Dove-web.war">
+      <element id="artifact" artifact-name="Doveweb:war exploded" />
+    </root>
+  </artifact>
+</component>

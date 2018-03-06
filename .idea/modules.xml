@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Dove.iml" filepath="$PROJECT_DIR$/Dove.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dove-common/Dove-common.iml" filepath="$PROJECT_DIR$/Dove-common/Dove-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dove-platform/Dove-platform.iml" filepath="$PROJECT_DIR$/Dove-platform/Dove-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dove-web/Dove-web.iml" filepath="$PROJECT_DIR$/Dove-web/Dove-web.iml" />
+    </modules>
+  </component>
+</project>
