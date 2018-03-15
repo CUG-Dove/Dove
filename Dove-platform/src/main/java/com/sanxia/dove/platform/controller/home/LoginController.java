@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Description: 登陆 <br/>
- * Date:2018年4月4日下午3:10 <br/>
+ * Date:2018年3月4日下午3:10 <br/>
  *
  * @author ly
  * @version
@@ -36,7 +36,6 @@ public class LoginController extends PlatformBaseController {
      */
     @RequestMapping("/toLoginPage")
     public String toLoginPage() {
-        System.out.print("登陆到主页面");
         return "home/login";
     }
 
@@ -60,6 +59,8 @@ public class LoginController extends PlatformBaseController {
         } catch (AuthenticationException e){
             // 登陆失败
             model.addAttribute("username", username);
+            model.addAttribute("errorMsg", "密码或账号不正确.");
+            System.out.println("登录失败！");
             return "home/login";
         }
         // 登陆成功，跳转到首页

@@ -17,4 +17,46 @@
       WHERE username = #{0} and password = #{1}
 </select>
 
+  <select id="canInsertUserByUsername" resultType="int">
+    select count(1) from system_user where username = #{0}
+  </select>
+  <select id="canInsertUserByEmail" resultType="int">
+    select count(1) from system_user where email = #{0}
+  </select>
+
+
+  <insert id="insertUser" useGeneratedKeys="true" keyProperty="id" parameterType="User">
+    insert into system_user (username,password,is_admin,role_id,profile_picture,full_name,phone,email,remark,unit,address,create_tm) values
+    (#{username},#{password},#{isAdmin},#{roleId},#{profilePicture},#{fullName},#{phone,jdbcType=VARCHAR},#{email,jdbcType=VARCHAR},#{remark,jdbcType=VARCHAR},#{unit,jdbcType=VARCHAR},#{address,jdbcType=VARCHAR},str_to_date(#{createTm},'%Y-%m-%d %H:%i:%s'))
+  </insert>
+
+  <update id="updateUser" parameterType="User">
+    update system_user set
+    username=#{username},
+    role_id = #{roleId},
+    profile_picture = #{profilePicture},
+    full_name = #{fullName},
+    phone = #{phone,jdbcType=VARCHAR},
+    email = #{email,jdbcType=VARCHAR},
+    remark = #{remark,jdbcType=VARCHAR},
+    unit = #{unit,jdbcType=VARCHAR},
+    address = #{address,jdbcType=VARCHAR}
+    where id = #{id}
+  </update>
+
+  <update id="deleteUserById">
+    delete from system_user where id = #{0}
+  </update>
+
+  <update id="updatePwd">
+    update system_user set password = #{0} where id = #{1} and password = #{2}
+  </update>
+
+  <select id="findById" resultType="User">
+    select
+    username,
+    full_name as fullName,
+    role_id as roleId
+    from system_user where id = #{0}
+  </select>
 </mapper>

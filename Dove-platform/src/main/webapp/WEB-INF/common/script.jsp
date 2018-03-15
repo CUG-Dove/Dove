@@ -11,3 +11,8 @@
 <script src="${ctx}resources/vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="${ctx}resources/vendors/bootstrap/js/bootstrap.min.js"></script>
+<!-- bootstrapvalidator -->
+<script src="${ctx}resources/vendors/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
+<!-- jquery-confirm -->
+<script src="${ctx}resources/vendors/jquery-confirm/dist/js/jquery-confirm.min.js"></script>
+

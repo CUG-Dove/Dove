@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/common/taglib.jsp"%>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <%@ include file="/WEB-INF/common/head.jsp"%>
 </head>
@@ -25,14 +25,14 @@
             <div class="container clearfix width-full text-center">
                 <a class="navbar-brand" href="#" style="padding:2px;width:100%;text-center:true;font-size:60px;">
                     <!-- 	<img src="#" class="navbar-img"> -->
-                    <span class="glyphicon glyphicon-grain" style="color:#7B8080;padding:8px;width:100px;"></span>
+                    <span class="glyphicon glyphicon-grain" style="color:#7B8080;padding:8px;width:100px;">
                 </a>
             </div>
         </div>
     </div>
 </div>
 <div class="" style="width:100%;height:50%;width: 340px;margin: 0 auto;padding-right: 16px !important;padding-left: 16px !important;">
-    <form id="loginForm" action="" method="post" >
+    <form id="loginForm" action="${ctx}login" method="post" >
         <div class="auth-form-header p-0">
             <h3>账户登陆</h3>
         </div>
@@ -80,13 +80,6 @@
 
 <%@ include file="/WEB-INF/common/script.jsp"%>
 <script>
-
-    $('#loginButton').on('click', function () {
-        var $btn = $(this).button('loading')
-        // business logic...
-        $btn.button('reset')
-    });
-    var div = document.getElementById("#alertDiv");
     function tryLogin(){
         if($("#username").val() == ""){
             //document.getElementById("#alertDiv").style.display="block";

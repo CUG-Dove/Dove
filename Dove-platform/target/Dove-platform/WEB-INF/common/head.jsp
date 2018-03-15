@@ -5,7 +5,6 @@
   Time: 9:54
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <base href="${ctx}" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -20,7 +19,12 @@
 
 <!-- Bootstrap -->
 <link href="${ctx}resources/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- bootstrapvalidator -->
+<link href="${ctx}resources/vendors/bootstrapvalidator/dist/css/bootstrapValidator.min.css" rel="stylesheet">
 <!-- fontawesome -->
 <link href="${ctx}resources/vendors/fontawesome-free-5.0.6/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
+<!-- jquery-confirm -->
+<link href="${ctx}resources/vendors/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet">
 <!-- Custom Theme Style -->
 <link href="${ctx}resources/css/custom.css" rel="stylesheet">
+

@@ -18,7 +18,6 @@ import java.math.BigDecimal;
 public class PlatformBaseController extends BaseController {
 
     public static String SESSION_USER = "login_user";
-    public static String SESSION_INDENTITY_CODE = "auth_code";
     protected static final Logger log = LogManager.getLogger(PlatformBaseController.class);
 
     /**

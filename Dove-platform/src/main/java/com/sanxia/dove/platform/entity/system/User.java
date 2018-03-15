@@ -15,7 +15,7 @@ import java.io.Serializable;
  *  Description:<br/>
  *  Date: 2018年3月2日 上午 9:55
  *  @author ly
- *  @version 1.1
+ *  @version
  *  @see
  */
 
@@ -29,6 +29,7 @@ public class User implements Serializable{
     private String fullName;
     private String phone;
     private String email;
+    private String unit;
     private String address;
     private String remark;
     private String createTm;
@@ -103,6 +104,14 @@ public class User implements Serializable{
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
     public String getAddress() {
