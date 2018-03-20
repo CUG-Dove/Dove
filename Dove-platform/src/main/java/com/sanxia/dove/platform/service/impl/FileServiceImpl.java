@@ -40,7 +40,28 @@ public class FileServiceImpl implements FileService {
         FileStorer fileStorer = new FileStorer(FloderNames,FileNames,"success");
         return fileStorer;
     }
-
+    @Override
+    public String getFloderDir2(String path, String URL) {
+        File file = new File(path);
+        String html1="";
+        String html2="";
+        Map<String,String> FloderNames = new HashMap<String, String>();
+        Map<String,String> FileNames = new HashMap<String, String>();
+        LinkedList<File> list = new LinkedList<File>();
+        File[] files = file.listFiles();
+        for (File file2 : files) {
+            if (file2.isDirectory()) {
+                //FloderNames.put(file2.getName(),URL);
+                //<p>文件夹:<a href="${file.value}${file.key}/"> ${file.key}</a></p>
+                html1 += "<p>文件夹:<a href='"+URL+file2.getName()+"/'>"+file2.getName()+"</a></p>";
+            } else {
+                //文件夹链接改为文件链接
+                //FileNames.put(file2.getName(),URL.replaceFirst("Floder","Blob"));
+                html2 += "<p>文件:<a href='"+URL+file2.getName()+"/'>"+file2.getName()+"</a></p>";
+            }
+        }
+        return html1+html2;
+    }
     public FileStorer showFile(String path ) {
         FileStorer fileStorer = new FileStorer();
         String[] pathSplit = path.split("/");
