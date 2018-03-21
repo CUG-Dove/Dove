@@ -8,12 +8,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-<link rel="stylesheet" href="/resources/vendors/markdown/css/style.css" />
-<link rel="stylesheet" href="/resources/vendors/markdown/css/editormd.preview.min.css" />
-<link rel="stylesheet" href="/resources/vendors/markdown/css/editormd.css" />
-<link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/resources/vendors/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/resources/vendors/md/css/style.css" />
+<link rel="stylesheet" href="/resources/vendors/md/css/editormd.preview.min.css" />
+<link rel="stylesheet" href="/resources/vendors/md/css/editormd.css" />
 <script src="/resources/vendors/jquery/dist/jquery.min.js"></script>
-<script src="/resources/vendors/markdown/lib/marked.min.js"></script>
-<script src="/resources/vendors/markdown/lib/prettify.min.js"></script>
-<script src="/resources/vendors/markdown/editormd/editormd.min.js"></script>
+<script src="/resources/vendors/md/lib/marked.min.js"></script>
+<script src="/resources/vendors/md/lib/prettify.min.js"></script>
+<script src="/resources/vendors/md/editormd/editormd.min.js"></script>

@@ -36,7 +36,7 @@
         testEditor = editormd("test-editormd", {
             width: "90%",
             height: 600,
-            path: "/resources/vendors/markdown/lib/",
+            path: "/resources/vendors/md/lib/",
             imageUpload: true,
             imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
             imageUploadURL: "/Blog/doUploadImg",

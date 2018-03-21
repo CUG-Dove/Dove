@@ -14,15 +14,14 @@
 <head>
     <title>File Info</title>
     <meta charset="utf-8" />
-    <title>文件查看</title>
     <%@ include file="common/head.jsp" %>
 </head>
 <body>
 <div id="layout">
     <div id="doc-content">
-    <textarea style="display:none;">
-    ${file.fileContent}
-    </textarea>
+        <pre>
+            ${file.fileContent}
+        </pre>
     </div>
 </div>
 
