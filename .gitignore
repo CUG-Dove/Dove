@@ -5,3 +5,5 @@
 Dove-platform/target/Dove-platform/WEB-INF/lib/Dove-common-1.0-SNAPSHOT.jar
 Dove-platform/target/Dove-platform/resources/vendors/md/lib/codemirror/mode/http/http.js
 Dove-platform/target/*
+Dove-platform/src/main/webapp/WEB-INF/common/head.jsp
+*.class

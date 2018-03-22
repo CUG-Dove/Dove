@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,6 +37,12 @@ public class FileController {
         if (username == "" || username == null) {
             username = "test";
         }
+        if (request.getHeader("x-pjax-version") != null) {
+            logger.info("!NULL");
+        }
+        if (request.getHeader("x-pjax-version") == null) {
+            logger.info("NULL");
+        }
         //获取路径
         StringBuffer requestURL = request.getRequestURL(); //整个URL
         if(requestURL.charAt(requestURL.length()-1) !='/'){
@@ -52,12 +59,13 @@ public class FileController {
         return "file/index";
     }
 
-    @RequestMapping("/{username}/Floder2/**")
+    @RequestMapping(value = "/{username}/Floder/**",method = RequestMethod.POST)
     @ResponseBody
     public String Ergodicfile2(String username,String nowFloder,Model model) {
         if (username == "" || username == null) {
             username = "test";
         }
+
         //获取路径
         StringBuffer requestURL = request.getRequestURL(); //整个URL
         if(requestURL.charAt(requestURL.length()-1) !='/'){
@@ -84,7 +92,7 @@ public class FileController {
         String servletPath = request.getServletPath();    //去掉localhost:8080的部分
 
         //拼凑resources文件夹路径
-        String path = "E:/"+servletPath;
+        String path = "E:"+servletPath;
         FileStorer fileStorer = fileService.showFile(path.replaceFirst("Blob","Floder"));
         logger.info(fileStorer.getFileContent());
         model.addAttribute("file",fileStorer);

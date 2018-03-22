@@ -17,6 +17,7 @@
 </head>
 <body>
 <div id="layout">
+    <%@ include file="/WEB-INF/common/top_logined.jsp"%>
     <header>
         <h1>Blog编辑器</h1>
     </header>

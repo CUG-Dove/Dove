@@ -1,5 +1,7 @@
 package com.sanxia.dove.platform.controller.file;
 
+import com.sanxia.dove.platform.core.utils.PropertiesUtils;
+import com.sanxia.dove.platform.dto.ImgJson;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,29 +38,26 @@ public class BlogController {
 
     @RequestMapping(value = "/doUploadImg",produces = {"application/json;charset=UTF-8"})
     @ResponseBody
-    public String UploadImg(@RequestParam(value = "editormd-image-file", required = true) MultipartFile file){
+    public ImgJson UploadImg(@RequestParam(value = "editormd-image-file", required = true) MultipartFile file){
+        String username = "user1";
         String trueFileName = file.getOriginalFilename();
-
         String suffix = trueFileName.substring(trueFileName.lastIndexOf("."));
-
         String fileName = System.currentTimeMillis()+"_"+suffix;
 
-        //String path = request.getSession().getServletContext().getRealPath("/assets/msg/upload/");
-        String path="e:/Dove/test/Floder";
-        System.out.println(path);
+        String upload_path=PropertiesUtils.getProperty("FILE_DISK_PATH")+username+"/img";
 
-        File targetFile = new File(path, fileName);
+        File targetFile = new File(upload_path, fileName);
         if(!targetFile.exists()){
             targetFile.mkdirs();
         }
-
+        String download_path = PropertiesUtils.getProperty("FILE_RELATIVELY_PATH")+username+"/img/"+fileName;
         //保存
         try {
             file.transferTo(targetFile);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        String json = "{'success':  1,'message' : 'upload success','url':'"+path+"'}";
+        ImgJson json = new ImgJson(1,"upload success",download_path);
 
         return json;
     }
