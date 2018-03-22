@@ -35,7 +35,8 @@
 			</bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
-
+	<!--访问静态资源（假如没找到相应的控制器就去找静态资源，如果都没有则返回404）-->
+	<mvc:default-servlet-handler/>
 	<!-- 定义静态文件所在路径 -->
 	<mvc:resources mapping="/resources/**" location="/resources/"
 		cache-period="31556926" />

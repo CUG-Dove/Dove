@@ -9,6 +9,7 @@ import com.sanxia.dove.platform.dto.FileStorer;
 
 public interface FileService {
     public FileStorer getFloderDir(String path, String URL);
+    public String getFloderDir2(String path, String URL);
     public FileStorer showFile(String path);
     public String fileType(String fileName);
 }

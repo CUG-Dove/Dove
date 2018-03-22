@@ -1,6 +1,7 @@
 package com.sanxia.dove.platform.service.impl;
 
 
+import com.sanxia.dove.platform.core.utils.PropertiesUtils;
 import com.sanxia.dove.platform.dto.FileStorer;
 import com.sanxia.dove.platform.service.FileService;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * Created by zy on 2018/3/2.
@@ -40,33 +42,64 @@ public class FileServiceImpl implements FileService {
         FileStorer fileStorer = new FileStorer(FloderNames,FileNames,"success");
         return fileStorer;
     }
-
+    @Override
+    public String getFloderDir2(String path, String URL) {
+        File file = new File(path);
+        String html1="";
+        String html2="";
+        Map<String,String> FloderNames = new HashMap<String, String>();
+        Map<String,String> FileNames = new HashMap<String, String>();
+        LinkedList<File> list = new LinkedList<File>();
+        File[] files = file.listFiles();
+        for (File file2 : files) {
+            if (file2.isDirectory()) {
+                //FloderNames.put(file2.getName(),URL);
+                //<p>文件夹:<a href="${file.value}${file.key}/"> ${file.key}</a></p>
+                html1 += "<p>文件夹:<a  href='"+URL+file2.getName()+"/'>"+file2.getName()+"</a></p>";
+            } else {
+                //文件夹链接改为文件链接
+                //FileNames.put(file2.getName(),URL.replaceFirst("Floder","Blob"));
+                html2 += "<p>文件:<a  href='"+URL+file2.getName()+"/'>"+file2.getName()+"</a></p>";
+            }
+        }
+        return html1+html2;
+    }
     public FileStorer showFile(String path ) {
+        /***************获取文件*********************/
         FileStorer fileStorer = new FileStorer();
         String[] pathSplit = path.split("/");
         String filename = pathSplit[pathSplit.length-1];
+        String filetype = fileType(filename);
         String encoding ="UTF-8";
         File file = new File(path);
-        Long fileLength = file.length();
-        byte[] fileContent = new byte[fileLength.intValue()];
-        try {
-            FileInputStream in = new FileInputStream(file);
-            in.read(fileContent);
-            in.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            String result = new String(fileContent, encoding);
-            fileStorer = new FileStorer(result,"java","success");
 
-        } catch (UnsupportedEncodingException e) {
-            System.err.println("The OS does not support " + encoding);
-            e.printStackTrace();
-            return null;
+        if (filetype == "docx") {
+            Long fileLength = file.length();
+            byte[] fileContent = new byte[fileLength.intValue()];
+            try {
+                FileInputStream in = new FileInputStream(file);
+                in.read(fileContent);
+                in.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                String result = new String(fileContent, encoding);
+                fileStorer = new FileStorer(result, "java", "success");
+            } catch (UnsupportedEncodingException e) {
+                System.err.println("The OS does not support " + encoding);
+                e.printStackTrace();
+                return null;
+            }
+        }else if (filetype == "pic"){
+
+            path = path.replaceFirst(PropertiesUtils.getProperty("FILE_UPLOAD_PATH"),PropertiesUtils.getProperty("FILE_DOWNLOAD_PATH"));
+            fileStorer = new FileStorer(path, "pic", "success");
         }
+
+
         return fileStorer;
     }
 
@@ -88,7 +121,7 @@ public class FileServiceImpl implements FileService {
             }
 
             // 创建文档类型数组
-            String document[] = { "txt", "doc", "docx", "xls", "htm", "html", "jsp", "rtf", "wpd", "pdf", "ppt" };
+            String document[] = { "txt", "java","c++","doc", "docx", "xls", "htm", "html", "jsp", "rtf", "wpd", "pdf", "ppt" };
             for (int i = 0; i < document.length; i++) {
                 if (document[i].equals(fileType)) {
                     return "docx";
@@ -99,7 +132,7 @@ public class FileServiceImpl implements FileService {
             String video[] = { "mp4", "avi", "mov", "wmv", "asf", "navi", "3gp", "mkv", "f4v", "rmvb", "webm" };
             for (int i = 0; i < video.length; i++) {
                 if (video[i].equals(fileType)) {
-                    return "视频";
+                    return "video";
                 }
             }
 
@@ -108,7 +141,7 @@ public class FileServiceImpl implements FileService {
                     "m4a", "vqf" };
             for (int i = 0; i < music.length; i++) {
                 if (music[i].equals(fileType)) {
-                    return "音乐";
+                    return "music";
                 }
             }
         }
