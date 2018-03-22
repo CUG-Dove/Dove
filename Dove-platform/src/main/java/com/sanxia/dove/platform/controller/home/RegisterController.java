@@ -18,14 +18,20 @@ import com.sanxia.dove.platform.mapper.UserMapper;
 import com.sanxia.dove.platform.service.UserService;
 import com.sanxia.dove.platform.utils.JsonUtils;
 import org.apache.commons.lang.StringUtils;
+import org.apache.shiro.web.session.HttpServletSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,21 +67,34 @@ public class RegisterController extends PlatformBaseController{
                            @RequestParam(value="password", required = false) String password,
                            Model model){
 
-        if (StringUtils.isBlank(username) || StringUtils.isBlank(email) || StringUtils.isBlank(password) ){
-            model.addAttribute("errorMsg", "请填写完整的注册信息.");
-            model.addAttribute("email", email);
-            model.addAttribute("username", username);
-            System.out.println("出错了！");
-            return "home/register";
+        try {
+            if (StringUtils.isBlank(username) || StringUtils.isBlank(email) || StringUtils.isBlank(password) ){
+                model.addAttribute("errorMsg", "请填写完整的注册信息.");
+                model.addAttribute("email", email);
+                model.addAttribute("username", username);
+                System.out.println("出错了！");
+                return "home/register";
+            }
+           //String path = this.getServletContext().getRealPath("/");
+          // System.out.println(path);
+            // 设置默认的图像
+            FileInputStream fis = new FileInputStream(new File( "M:/images/user2.jpg"));
+            //System.out.println(path);
+            byte[] bytes = FileCopyUtils.copyToByteArray(fis);
+            User user = new User();
+            user.setUsername(username);
+            user.setPassword(password);
+            user.setEmail(email);
+            user.setProfilePicture(bytes);
+            System.out.println("bytes:" + bytes);
+            System.out.println(user.toString());
+            userService.register(user);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println("进入注册。。。");
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(password);
-        user.setEmail(email);
-        user.getProfilePicture();
-        System.out.println(user);
-        userService.register(user);
+
 
         return "home/home";
     }

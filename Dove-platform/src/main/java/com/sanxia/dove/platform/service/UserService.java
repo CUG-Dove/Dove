@@ -29,8 +29,14 @@ public interface UserService{
     /**
      * 保存或更新用户信息
      */
-    MapDto saveOrUpdate(User user, User opt);
+    MapDto saveOrUpdate(User user);
 
+    /**
+     *  删除用户 by ID
+     * @param id
+     * @param user
+     * @return
+     */
     MapDto deleteById(String id, User user);
 
     /**

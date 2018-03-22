@@ -74,7 +74,7 @@ public class UserServiceImpl implements UserService {
             return Boolean.TRUE;
         } else {
             return Boolean.FALSE;
-    }
+        }
     }
 
     @Override
@@ -86,10 +86,21 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * 更新用户信息
+     * @param user
+     * @return
+     */
     @Override
-    public MapDto saveOrUpdate(User user, User opt) {
+    public MapDto saveOrUpdate(User user) {
         MapDto mapDto = new MapDto();
-        return null;
+        String now = DateUtils.format(new Date(), "yyyy-MM-dd HH:mm:ss");
+        user.setModifyTm(now);
+        userMapper.updateUser(user);
+        //增加权限
+        //...
+        logService.addLog(user.getId(), null, "修改帐号：" + user.getUsername(), "系统管理");
+        return mapDto;
     }
 
     @Override

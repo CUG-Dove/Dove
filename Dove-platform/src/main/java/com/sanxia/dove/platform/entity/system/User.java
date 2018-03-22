@@ -10,6 +10,7 @@ package com.sanxia.dove.platform.entity.system;
 
 import java.io.File;
 import java.io.Serializable;
+import java.sql.Blob;
 
 /**
  *  Description:<br/>
@@ -20,19 +21,24 @@ import java.io.Serializable;
  */
 
 public class User implements Serializable{
+
+    private static final long serialVersionUID = 375767242322918066L;
+
     private Long id;
     private String username;
     private String password;
     private String isAdmin;
     private Long roleId;
-    private Byte[] profilePicture;
+    private byte[] profilePicture;
     private String fullName;
     private String phone;
     private String email;
-    private String unit;
-    private String address;
+    private String company;
+    private String url;
+    private String location;
     private String remark;
     private String createTm;
+    private String modifyTm;
 
     public Long getId() {
         return id;
@@ -41,7 +47,6 @@ public class User implements Serializable{
     public void setId(Long id) {
         this.id = id;
     }
-
     public String getUsername() {
         return username;
     }
@@ -82,11 +87,11 @@ public class User implements Serializable{
         this.fullName = fullName;
     }
 
-    public Byte[] getProfilePicture() {
+    public byte[] getProfilePicture() {
         return profilePicture;
     }
 
-    public void setProfilePicture(Byte[] profilePicture) {
+    public void setProfilePicture(byte[] profilePicture) {
         this.profilePicture = profilePicture;
     }
 
@@ -106,20 +111,26 @@ public class User implements Serializable{
         this.email = email;
     }
 
-    public String getUnit() {
-        return unit;
+    public String getCompany() {
+        return company;
+    }
+    public void setCompany(String company) {
+        this.company = company;
     }
 
-    public void setUnit(String unit) {
-        this.unit = unit;
+    public String getUrl() {
+        return url;
     }
 
-    public String getAddress() {
-        return address;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public String getLocation() {
+        return location;
+    }
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getRemark() {
@@ -136,5 +147,13 @@ public class User implements Serializable{
 
     public void setCreateTm(String createTm) {
         this.createTm = createTm;
+    }
+
+    public String getModifyTm() {
+        return modifyTm;
+    }
+
+    public void setModifyTm(String modifyTm) {
+        this.modifyTm = modifyTm;
     }
 }

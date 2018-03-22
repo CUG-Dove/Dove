@@ -14,5 +14,9 @@
 <!-- bootstrapvalidator -->
 <script src="${ctx}resources/vendors/bootstrapvalidator/dist/js/bootstrapValidator.min.js"></script>
 <!-- jquery-confirm -->
-<script src="${ctx}resources/vendors/jquery-confirm/dist/js/jquery-confirm.min.js"></script>
+<script src="${ctx}resources/vendors/jquery-confirm/dist/jquery-confirm.min.js"></script>
+<!-- cropperjs -->
+<script src="${ctx}resources/vendors/cropperjs/dist/cropper.min.js"></script>
+
+<script src="${ctx}resources/js/canvas-to-blob.min.js"></script>
 

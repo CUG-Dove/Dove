@@ -27,4 +27,5 @@
 <link href="${ctx}resources/vendors/jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet">
 <!-- Custom Theme Style -->
 <link href="${ctx}resources/css/custom.css" rel="stylesheet">
-
+<!-- cropperjs-->
+<link href="${ctx}resources/vendors/cropperjs/dist/cropper.min.css" rel="stylesheet">

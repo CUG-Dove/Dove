@@ -10,11 +10,14 @@ public interface UserMapper {
 
     int canInsertUserByEmail(String email);
 
+    int canUpdateUser(String username, Long id);
+
     int insertUser(User user);
 
     int updateUser(User user);
 
     int updatePwd(String newPwd, Long id, String currentPwd);
+
 
     int deleteUserById(String id);
 
