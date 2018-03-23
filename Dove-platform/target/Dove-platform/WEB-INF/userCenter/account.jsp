@@ -72,11 +72,11 @@
                     </div>
                 </div>
             </div>
-            <div class="" style="width: 290px;float: right !important;border: 1px #e1e4e8 solid;padding: 20px;font-size: small;margin-top: -520px;margin-right: 10px;">
+            <!--div class="" style="width: 290px;float: right !important;border: 1px #e1e4e8 solid;padding: 20px;font-size: small;margin-top: -520px;margin-right: 10px;">
                 <div class="Subhead mt-0 mb-0" >
                     <h2 class="Subhead-heading" >xxx</h2>
                 </div>
-            </div>
+            </div-->
         </div>
     </div>
 

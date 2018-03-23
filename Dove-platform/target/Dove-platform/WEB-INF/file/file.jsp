@@ -116,7 +116,7 @@ $.support.pjax =
     }, settings.timeout)
 
     <span class="hljs-comment">// Clear timeout setting so jquerys internal timeout isn't invoked</span>
-    settings.timeout = <span class="hljs-number">0</span></code>  
+    settings.timeout = <span class="hljs-number">0</span></code>
         </pre>
     </div>
     </c:when>

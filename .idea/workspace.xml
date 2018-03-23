@@ -7,38 +7,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7859bf-cc27-4904-a6d1-ebdfd7ae3588" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/dto/ImgJson.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/index_.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/uploads/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform.war" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/file/BlogController.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/file/BlogController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/css/file-blog-common.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/file/FileController.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/file/FileController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/core/utils/PlatformConstants.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/core/utils/PlatformConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/service/impl/FileServiceImpl.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/service/impl/FileServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/file/BlogController.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/file/BlogController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/home/LoginController.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/home/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/home/RegisterController.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/home/RegisterController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/entity/system/User.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/entity/system/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/mapper/UserMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/service/UserService.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/com/sanxia/dove/platform/service/impl/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/file/FileController.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/file/FileController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/core/utils/PlatformConstants.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/core/utils/PlatformConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/service/impl/FileServiceImpl.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/service/impl/FileServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/home/LoginController.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/home/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/home/RegisterController.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/home/RegisterController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/entity/system/User.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/entity/system/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/mapper/UserMapper.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/mapper/UserMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/service/UserService.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/service/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/com/sanxia/dove/platform/service/impl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/BlogController.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/BlogController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/FileController.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/FileController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/core/utils/PlatformConstants.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/core/utils/PlatformConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/FileServiceImpl.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/FileServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/resources/conf/application.properties" afterPath="$PROJECT_DIR$/Dove-platform/src/main/resources/conf/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/home/LoginController.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/home/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/home/RegisterController.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/home/RegisterController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/entity/system/User.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/entity/system/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/mapper/UserMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/UserService.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/resources/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/Dove-platform/src/main/resources/mapper/UserMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/head.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/head.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/script.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/script.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/top_logined.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/top_logined.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/WriteBlog.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/WriteBlog.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/file.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/file.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/index.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/conf/application.properties" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/conf/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/home/test.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/home/test.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/account.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/account.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/menu.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/menu.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/profile.jsp" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/profile.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/css/custom.css" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/vendors/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/vendors/jquery/dist/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/vendors/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/vendors/jquery/dist/jquery.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/conf/springMVC.xml" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/conf/springMVC.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/classes/mapper/UserMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/common/head.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/common/head.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/common/script.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/common/script.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/common/top_logined.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/common/top_logined.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/file/WriteBlog.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/file/WriteBlog.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/file/file.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/file/file.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/file/index.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/file/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/conf/application.properties" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/conf/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/home/test.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/home/test.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/userCenter/account.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/userCenter/account.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/userCenter/menu.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/userCenter/menu.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/userCenter/profile.jsp" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/WEB-INF/userCenter/profile.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/resources/css/custom.css" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/resources/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/resources/vendors/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/resources/vendors/jquery/dist/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/resources/vendors/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/Dove-platform/target/Dove-platform/resources/vendors/jquery/dist/jquery.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/conf/springMVC.xml" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/conf/springMVC.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dove-platform/target/classes/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/Dove-platform/target/classes/mapper/UserMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,41 +79,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/FileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlogController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/BlogController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/file.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="118" column="64" lean-forward="false" selection-start-line="118" selection-start-column="64" selection-end-line="118" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jdbc.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/resources/conf/jdbc.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="328">
+              <caret line="56" column="23" lean-forward="true" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -99,18 +102,48 @@
       <file leaf-file-name="FileServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/FileServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="50" column="50" lean-forward="false" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+            <state relative-caret-position="282">
+              <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/index.jsp">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/resources/conf/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="42" column="86" lean-forward="false" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
+            <state relative-caret-position="190">
+              <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file-blog-common.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/css/file-blog-common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/head.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profile.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/profile.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -148,9 +181,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/Dove-common/pom.xml" />
         <option value="$PROJECT_DIR$/Dove-common/src/main/java/com/sanxia/dove/common/utils/BigDecimalEditor.java" />
         <option value="$PROJECT_DIR$/Dove-common/src/main/java/com/sanxia/dove/common/core/utils/BigDecimalEditor.java" />
         <option value="$PROJECT_DIR$/Dove-common/src/main/java/com/sanxia/dove/common/utils/DateUtils.java" />
@@ -173,7 +203,6 @@
         <option value="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/core/controller/BaseController.java" />
         <option value="$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/css/common.css" />
         <option value="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/core/shiro/UserRealm.java" />
-        <option value="$PROJECT_DIR$/Dove-platform/src/main/resources/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/home/LoginController.java" />
         <option value="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/taglib.jsp" />
@@ -196,9 +225,13 @@
         <option value="$PROJECT_DIR$/Dove-platform/src/main/resources/conf/application.properties" />
         <option value="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/core/utils/PlatformConstants.java" />
         <option value="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/BlogController.java" />
-        <option value="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/FileController.java" />
-        <option value="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/index.jsp" />
         <option value="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/file.jsp" />
+        <option value="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.java" />
+        <option value="$PROJECT_DIR$/Dove-platform/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/profile.jsp" />
+        <option value="$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/index.jsp" />
+        <option value="$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/css/file-blog-common.css" />
+        <option value="$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/FileController.java" />
       </list>
     </option>
   </component>
@@ -275,8 +308,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -390,7 +421,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="file" />
+              <option name="myItemId" value="userCenter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -421,6 +452,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dove" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dove" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dove-platform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,8 +574,38 @@
               <option name="myItemId" value="platform" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="Dove" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dove" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dove-platform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -541,6 +636,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="platform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -577,8 +680,38 @@
               <option name="myItemId" value="core" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="Dove" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dove" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Dove-platform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="platform" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -612,12 +745,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="file" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -1374,20 +1513,22 @@
       <workItem from="1521598986782" duration="16403000" />
       <workItem from="1521617968563" duration="8010000" />
       <workItem from="1521635185041" duration="2781000" />
-      <workItem from="1521698128233" duration="602000" />
+      <workItem from="1521698128233" duration="3491000" />
+      <workItem from="1521703842712" duration="6489000" />
+      <workItem from="1521713212112" duration="326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85433000" />
+    <option name="totallyTimeSpent" value="95137000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3001346" sideWeight="0.35989717" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3001346" sideWeight="0.36953726" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.4975" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1397,8 +1538,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3001346" sideWeight="0.6401028" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3001346" sideWeight="0.6304627" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.02422611" sideWeight="0.48971722" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1407,7 +1549,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27860028" sideWeight="0.734375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.4974293" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20179948" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20694087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1415,7 +1557,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.025537634" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1430,19 +1571,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/BlogController.java</url>
-          <line>43</line>
+          <url>file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.java</url>
+          <line>181</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/FileController.java</url>
-          <line>64</line>
+          <url>file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/UserServiceImpl.java</url>
+          <line>95</line>
           <properties />
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="26" />
+      <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1451,70 +1592,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/entity/system/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/vendors/md/editormd/editormd.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/vendors/md/editormd.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/vendors/md/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/home/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/home/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/core-scripting.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/vendors/jquery/dist/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/vendors/md/lib/marked.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1650,25 +1727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="43" column="29" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/profile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/WriteBlog.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1683,6 +1745,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="826" column="0" lean-forward="false" selection-start-line="826" selection-start-column="0" selection-end-line="826" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1690,13 +1753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.16.RELEASE/spring-web-3.2.16.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1719,7 +1775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="63" lean-forward="false" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1731,19 +1786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/core/utils/PlatformConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="37" column="10" lean-forward="false" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1759,23 +1805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/BlogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/FileServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="50" column="50" lean-forward="false" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1783,23 +1812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="86" lean-forward="false" selection-start-line="42" selection-start-column="86" selection-end-line="42" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1807,23 +1819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/resources/conf/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/file.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="118" column="64" lean-forward="false" selection-start-line="118" selection-start-column="64" selection-end-line="118" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1831,6 +1826,161 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/BlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="41" column="34" lean-forward="true" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/file.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="118" column="64" lean-forward="false" selection-start-line="118" selection-start-column="64" selection-end-line="118" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/3.2.16.RELEASE/spring-web-3.2.16.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.2/mybatis-3.2.2.jar!/org/apache/ibatis/binding/MapperProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.2.16.RELEASE/spring-core-3.2.16.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/3.2.16.RELEASE/spring-tx-3.2.16.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.2.16.RELEASE/spring-aop-3.2.16.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="445" column="0" lean-forward="false" selection-start-line="445" selection-start-column="0" selection-end-line="445" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/userCenter/UserSettingsControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+          <folding>
+            <marker date="1521705997389" expanded="true" signature="1266:1810" ph="SELECT su.`I... SYSTEM_USER" />
+            <marker date="1521705997389" expanded="true" signature="1883:1937" ph="select count... system_user" />
+            <marker date="1521705997389" expanded="true" signature="2008:2059" ph="select count... system_user" />
+            <marker date="1521705997389" expanded="true" signature="2167:2703" ph="insert into system_user... " />
+            <marker date="1521705997389" expanded="true" signature="2770:3318" ph="update syste... " />
+            <marker date="1521705997389" expanded="true" signature="3391:3746" ph="update syste... " />
+            <marker date="1521705997389" expanded="true" signature="3795:3834" ph="delete from " />
+            <marker date="1521705997389" expanded="true" signature="3878:3952" ph="update syste... " />
+            <marker date="1521705997389" expanded="true" signature="4013:4119" ph="select usern... system_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/home/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/entity/system/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/userCenter/profile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/common/head.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/WEB-INF/file/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/service/impl/FileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="35" column="51" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/webapp/resources/css/file-blog-common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/resources/conf/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dove-platform/src/main/java/com/sanxia/dove/platform/controller/file/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="56" column="23" lean-forward="true" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
           <folding />
         </state>
       </provider>

@@ -49,7 +49,8 @@ public class LoginController extends PlatformBaseController {
         Subject currenUser = SecurityUtils.getSubject();
         if (currenUser.isAuthenticated()) {
             // 已经登陆，跳转到首页
-            return "home/home";
+            System.out.println("已经登陆，跳转!"+ currenUser);
+            return "userCenter/profile";
         }
 
         // 登陆
@@ -64,6 +65,7 @@ public class LoginController extends PlatformBaseController {
             return "home/login";
         }
         // 登陆成功，跳转到首页
-        return "home/home";
+        System.out.println("登陆成功！" + getUser());
+        return "userCenter/profile";
     }
 }
