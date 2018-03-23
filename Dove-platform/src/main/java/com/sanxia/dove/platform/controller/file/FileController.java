@@ -43,17 +43,16 @@ public class FileController {
         if (request.getHeader("x-pjax-version") == null) {
             logger.info("NULL");
         }
-        //获取路径
-        StringBuffer requestURL = request.getRequestURL(); //整个URL
-        if(requestURL.charAt(requestURL.length()-1) !='/'){
-            requestURL.append('/');
-        }
+
 
         String servletPath = request.getServletPath();    //去掉localhost:8080的部分
-
+        String url  = servletPath;
+        if(servletPath.charAt(0)=='/') {
+            servletPath = servletPath.replaceFirst("/", "");
+        }
         //拼凑resources文件夹路径
         String path = PropertiesUtils.getProperty("FILE_DISK_PATH")+servletPath;
-        String url  = PropertiesUtils.getProperty("FILE_RELATIVELY_PATH")+requestURL.toString();
+
         logger.info(path);
         FileStorer fileStorer = fileService.getFloderDir(path,url);
 
@@ -92,9 +91,12 @@ public class FileController {
     @RequestMapping("/{username}/Blob/**")
     public String shouFile(String username,Model model){
         String servletPath = request.getServletPath();    //去掉localhost:8080的部分
-
+        String url  = servletPath;
+        if(servletPath.charAt(0)=='/') {
+            servletPath = servletPath.replaceFirst("/", "");
+        }
         //拼凑resources文件夹路径
-        String path = "E:"+servletPath;
+        String path = PropertiesUtils.getProperty("FILE_DISK_PATH")+servletPath;
         FileStorer fileStorer = fileService.showFile(path.replaceFirst("Blob","Floder"));
         logger.info(fileStorer.getFileContent());
         model.addAttribute("file",fileStorer);

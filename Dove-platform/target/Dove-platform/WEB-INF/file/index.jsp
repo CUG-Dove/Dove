@@ -21,34 +21,38 @@
 <%@ include file="/WEB-INF/common/top_logined.jsp" %>
 <div class="application-main"  role="main">
     <div class="container main-top">
-    <div><h1>username</h1></div>
+        <div><h1>username</h1></div>
     </div>
     <div class="container main-mid">
-        <table class="table table-hover">
-            <col width="10px"/>
-            <col width="50px"/>
-            <col width="200px"/>
-            <tbody>
-            <c:forEach var="dir" items="${files.directaryNames}">
-                <tr class="Dir-item">
-                    <td class="File-icon"><span class="glyphicon glyphicon-folder-close"></span></td>
-                    <td class="File-name"><a href="${dir.value}${dir.key}/"> ${dir.key}</a></td>
-                    <td class="File-brief">***</td>
-                    <td class="File-create-time">2018-3-22 16:46:58</td>
-                </tr>
-            </c:forEach>
+        <div class="">
 
-            <c:forEach var="file" items="${files.fileNames}">
-                <tr class="File-item">
-                    <td class="File-icon" ><span class="glyphicon glyphicon-file"></span></td>
-                    <td class="File-name"><a href="${file.value}${file.key}"> ${file.key}</a></td>
-                    <td class="File-brief">***</td>
-                    <td class="File-Create-time">2018-3-22 16:47:06</td>
-                </tr>
-            </c:forEach>
-            </tbody>
-        </table>
+        </div>
+        <div class="">
+            <table class="table table-hover content-table show-table">
+                <col width="10px"/>
+                <col width="50px"/>
+                <col width="200px"/>
+                <tbody>
+                <c:forEach var="dir" items="${files.directaryNames}">
+                    <tr class="Dir-item">
+                        <td class="File-icon"><span class="glyphicon glyphicon-folder-close"></span></td>
+                        <td class="File-name"><a href="${dir.value}/${dir.key}"> ${dir.key}</a></td>
+                        <td class="File-brief">***</td>
+                        <td class="File-create-time">2018-3-22 16:46:58</td>
+                    </tr>
+                </c:forEach>
 
+                <c:forEach var="file" items="${files.fileNames}">
+                    <tr class="File-item">
+                        <td class="File-icon" ><span class="glyphicon glyphicon-file"></span></td>
+                        <td class="File-name"><a href="${file.value}/${file.key}"> ${file.key}</a></td>
+                        <td class="File-brief">***</td>
+                        <td class="File-Create-time">2018-3-22 16:47:06</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </div>
