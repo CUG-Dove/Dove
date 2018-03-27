@@ -3,20 +3,25 @@ package com.sanxia.dove.platform.service.impl;
 
 import com.sanxia.dove.platform.core.utils.PropertiesUtils;
 import com.sanxia.dove.platform.dto.FileStorer;
+import com.sanxia.dove.platform.entity.file.Blog;
+import com.sanxia.dove.platform.mapper.BlogMapper;
 import com.sanxia.dove.platform.service.FileService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Properties;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * Created by zy on 2018/3/2.
  */
 @Service
 public class FileServiceImpl implements FileService {
+
+    @Autowired
+    private BlogMapper blogMapper;
+
     /***
      *
      * @param path 文件夹路径
@@ -146,6 +151,32 @@ public class FileServiceImpl implements FileService {
             }
         }
         return "其他";
+    }
+
+    /***
+     * 发布博客
+     * @param writerId
+     * @param content
+     * @return
+     */
+    @Override
+    public boolean createBlog(long writerId, String content) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");
+        Date now = new Date();
+        long ID = Long.parseLong(format.format(now));
+        format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String createTime = format.format(now);
+        int agrees = 0;
+        int disagrees = 0;
+        int reviews = 0;
+        String isDelete = "0";
+        Blog blog = new Blog(ID,writerId,content.getBytes(),createTime,createTime,createTime,isDelete,agrees,disagrees,reviews);
+        int res = blogMapper.insertBlog(blog);
+        if(res > 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }
