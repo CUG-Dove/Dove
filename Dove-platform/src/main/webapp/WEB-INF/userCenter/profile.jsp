@@ -52,7 +52,6 @@
 
                         </dl>
 
-                        // model弹出框
                         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -116,7 +115,7 @@
                             </dd>
                         </dl>
                         <hr></hr>
-                        <dl class="form-group">
+                        <dl class="form-group ">
                             <dt>
                                 <label for="user_profile_localtion">所在地</label>
                             </dt>
@@ -141,10 +140,7 @@
     </div-->
 </div>
 </div>
-
-
-
-
+<%@ include file="/WEB-INF/common/footer.jsp"%>
 <%@ include file="/WEB-INF/common/script.jsp"%>
     <script>
         window.addEventListener('DOMContentLoaded', function () {
@@ -154,12 +150,12 @@
             var $alert = $('.alert');
             var $modal = $('#modal');
             var cropper;
+            $alert.hide();
             input.addEventListener('change', function (e) {
                 var files = e.target.files;
                 var done = function (url) {
                     input.value = '';
                     image.src = url;
-                    $alert.hide();
                     $modal.modal('show');
                 };
                 var reader;
@@ -217,6 +213,7 @@
                             processData: false,
                             contentType: false,
                             success: function (result) {
+                                document.getElementById('avatar-top').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
                                 document.getElementById('avatar-left').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
                                         $alert.show().addClass('alert-success').text('Upload success');
                             },
@@ -233,6 +230,8 @@
                 }
             });
         });
+
+
     </script>
 </body>
 

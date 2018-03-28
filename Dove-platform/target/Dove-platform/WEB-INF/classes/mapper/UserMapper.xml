@@ -57,7 +57,7 @@
   <update id="updateUser" parameterType="User">
     update system_user set
     USERNAME = #{username},
-    IS_ADMIN = #{isAdmin}，
+    IS_ADMIN = #{isAdmin},
     ROLE_ID = #{roleId},
     PROFILE_PICTURE = #{profilePicture, typeHandler=org.apache.ibatis.type.BlobTypeHandler},
     FULL_NAME = #{fullName},

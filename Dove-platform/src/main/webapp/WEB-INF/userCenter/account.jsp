@@ -53,12 +53,15 @@
                                 </dd>
                             </dl>
                             <p>
-                                <button class="btn btn-default mr-2" style="background-color: #eff3f6;background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%)" type="submit">修改密码</button>
+                                <button class="btn btn-default mr-2" style="background-color: #eff3f6;background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);width: 130px;" type="submit">修改密码</button>
                                 <span>
                                     <a href="#" style="font-size: 12px;font-weight: 600">忘记密码？</a>
                                 </span>
                             </p>
                         </form>
+                        <p class="text-small text-gray mt-3" style="letter-spacing: 0.3px;">
+                            <i class="icon-info-sign" style="font-size: medium"></i> <a href="#">忘记密码</a>可以通过邮件或者<a href="#">密保问题</a>进行找回，更多的详细信息请查看<a herf="#">隐私保护</a>
+                        </p>
                         <div class="Subhead Subhead--spacious">
                             <h2 class="Subhead-heading">增加密保问题</h2>
                         </div>
@@ -80,9 +83,7 @@
         </div>
     </div>
 
-
-
-
+<%@ include file="/WEB-INF/common/footer.jsp"%>
 <%@ include file="/WEB-INF/common/script.jsp"%>
 </body>
 

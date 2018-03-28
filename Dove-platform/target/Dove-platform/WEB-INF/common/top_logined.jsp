@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <div class="position-relative" style="height: 72px;" role="navigation">
     <div id="js-pjax-loader-bar" class="pjax-loader-bar">
         <div class="progress"></div>
@@ -62,7 +62,7 @@
                         <li class="dropdown">
                             <a class="user-nav dropdown-details details-reset  d-flex pl-2 flex-items-center " data-toggle="dropdown">
                                 <a class="HeaderNavlink name mt-1" data-toggle="dropdown">
-                                    <img class=" float-left mr-1 img-circle"  src="${ctx}settings/showUserPicture" width="35" height="35" alt="" >
+                                    <img class=" float-left mr-1 img-circle"  id="avatar-top" src="${ctx}settings/showUserPicture" width="35" height="35" alt="" >
                                     <span class="dropdown-caret"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-sw">
@@ -76,6 +76,9 @@
                         </li>
                     </ul>
                 </div>
+                </div>
+
+
             </div>
         </div>
     </header>

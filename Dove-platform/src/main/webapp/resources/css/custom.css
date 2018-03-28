@@ -811,6 +811,15 @@ a {
     cursor: default;
     background-color: #fff;
 }
+.menu-item.selected::before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    content: "";
+    background-color: #e36209;
+}
 
 .rounded-2 {
     border-radius: 6px !important;
@@ -1032,4 +1041,270 @@ edit-profile-avatar {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+.text-small {
+    font-size: 12px !important;
+}
+
+.border-gray-light {
+    border-color: #eaecef !important;
+}
+.border-top{
+    border-top: 1px #e1e4e8 solid  !important;
+}
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+.footer-octicon {
+    color: #bfc4ca;
+}
+.position-relative{
+    position:relative !important;
+}
+
+/**  主页  main.jsp*/
+
+.min-width-0 {
+    min-width: 0 !important;
+}
+.my-6 {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+.border-bottom {
+    border-bottom: 1px #e1e4e8 solid !important;
+}
+.py-4 {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+.rounded-1 {
+    border-radius: 3px !important;
+}
+.flex-items-start {
+    align-items: flex-start !important;
+}
+.f3 {
+    font-size: 18px !important;
+}
+.text-normal {
+    font-weight: 400 !important;
+}
+.subinfo_box {
+    height: 20px;
+    line-height: 20px;
+    margin-right: -8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.subinfo_box .subinfo_face {
+    float: left;
+    height: 20px;
+    margin-right: 20px;
+}
+.subinfo_box .subinfo {
+    float: left;
+    margin-right: 50px;
+}
+
+.S_txt2, .W_input, .W_btn_b_disable, .W_btn_b_disable:hover {
+    color: #808080;
+    text-decoration: none;
+}
+
+.subinfo_box .subinfo_rgt {
+    float: right;
+    padding: 0 8px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.subinfo_box .subinfo_rgt em {
+    vertical-align: middle;
+}
+
+.subinfo_box .W_ficon {
+    margin-right: 5px;
+}
+
+.S_ficon, .S_ficon_dis, a.S_ficon_dis:hover, a:hover .S_ficon_dis {
+    color: #696e78;
+}
+
+.W_f16 {
+    font-size: 16px;
+}
+
+.W_ficon {
+    font-family: "wbficonregular" !important;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+}
+
+.subinfo_box .rgt_line {
+    width: 0;
+    height: 10px;
+    border-right: 1px solid #ccc;
+    margin-top: 6px;
+}
+
+.W_fr {
+    float: right;
+}
+
+.subinfo_box .rgt_line {
+    width: 0;
+    height: 10px;
+    border-right: 1px solid #ccc;
+    margin-top: 6px;
+}
+
+.mb-2 {
+    margin-bottom: 8px !important;
+}
+.py-5{
+    padding-top: 15px !important;
+}
+.left-main{
+    width: 110px;
+    margin-right: 60px;
+}
+.left-nav{
+    width: 110px;
+}
+.left-nav{
+    text-align: center;
+    position: fixed;
+}
+
+/** main left menu */
+.main-menu-item {
+    position: relative;
+    display: block;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.main-menu-item.selected {
+    font-weight: 600;
+    color: #24292e;
+    cursor: default;
+    background-color: #fff;
+}
+.main-menu-item.selected::before{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    content: "";
+    background-color: #e36209;
+}
+.left-nav a{
+    text-decoration: none;
+
+}
+
+/** 右边导航 **/
+
+
+@media (min-width: 544px){
+    .gutter-sm>[class*="col-"] {
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+    }
+}
+
+
+@media (min-width: 544px){
+    .px-sm-3 {
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+    }
+}
+
+.my-5 {
+   margin-top: 32px !important;
+   margin-bottom: 0px !important;
+}
+
+
+@media (min-width: 768px){
+    .col-md-4 {
+        width: 33.33333%;
+    }
+}
+
+@media (min-width: 544px){
+    .col-sm-6 {
+        width: 50%;
+    }
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+    display: block;
+}
+
+
+@media (min-width: 1012px){
+    .col-lg-3 {
+        width: 35%;
+    }
+}
+@media (min-width: 1012px){
+    .col-lg-12 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px){
+    .h1 {
+        font-size: 32px !important;
+    }
+}
+
+    .h1 {
+        font-size: 26px !important;
+    }
+@media (min-width: 1012px){
+    .d-lg-block {
+        display: block !important;
+    }
+}
+
+@media (min-width: 544px){
+    .d-sm-flex {
+        display: flex !important;
+    }
+}
+
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+@media (min-width: 544px){
+    .gutter-sm {
+        margin-right: -140px;
+        margin-left: -16px;
+    }
+}
+
+.width-fit {
+    max-width: 100% !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600 !important;
+}
+@media (min-width: 768px){
+    .h3 {
+        font-size: 20px !important;
+    }
+}
+
+.h3 {
+        font-size: 18px !important;
 }
