@@ -12,6 +12,7 @@
 <head>
     <%@ include file="/WEB-INF/common/head.jsp"%>
 </head>
+
 <body class="logged-out page-responsive min-width-0 f4">
 <%@ include file="/WEB-INF/common/top_logined.jsp"%>
 <div class="js-flash-container"></div>
@@ -52,6 +53,10 @@
 
                         </dl>
 
+<<<<<<< HEAD
+=======
+                        // model弹出框
+>>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
                         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -138,6 +143,10 @@
             <h2 class="Subhead-heading" >xxx</h2>
         </div>
     </div-->
+<<<<<<< HEAD
+=======
+</div>
+>>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
 </div>
 </div>
 <%@ include file="/WEB-INF/common/footer.jsp"%>
@@ -190,6 +199,58 @@
                 var initialAvatarURL;
                 var canvas;
 
+<<<<<<< HEAD
+=======
+<%@ include file="/WEB-INF/common/script.jsp"%>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var avatar = document.getElementById('avatar');
+            var image = document.getElementById('image');
+            var input = document.getElementById('upload-profile-picture');
+            var $alert = $('.alert');
+            var $modal = $('#modal');
+            var cropper;
+            input.addEventListener('change', function (e) {
+                var files = e.target.files;
+                var done = function (url) {
+                    input.value = '';
+                    image.src = url;
+                    $alert.hide();
+                    $modal.modal('show');
+                };
+                var reader;
+                var file;
+                var url;
+
+                if (files && files.length > 0) {
+                    file = files[0];
+
+                    if (URL) {
+                        done(URL.createObjectURL(file));
+                    } else if (FileReader) {
+                        reader = new FileReader();
+                        reader.onload = function (e) {
+                            done(reader.result);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                }
+            });
+            $modal.on('shown.bs.modal', function () {
+                cropper = new Cropper(image, {
+                    aspectRatio: 1,
+                    viewMode: 3,
+                });
+            }).on('hidden.bs.modal', function () {
+                cropper.destroy();
+                cropper = null;
+            });
+
+            document.getElementById('crop').addEventListener('click', function () {
+                var initialAvatarURL;
+                var canvas;
+
+>>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
                 $modal.modal('hide');
 
                 if (cropper) {
@@ -213,7 +274,10 @@
                             processData: false,
                             contentType: false,
                             success: function (result) {
+<<<<<<< HEAD
                                 document.getElementById('avatar-top').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
+=======
+>>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
                                 document.getElementById('avatar-left').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
                                         $alert.show().addClass('alert-success').text('Upload success');
                             },
@@ -230,8 +294,11 @@
                 }
             });
         });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
     </script>
 </body>
 

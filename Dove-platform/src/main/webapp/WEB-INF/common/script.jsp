@@ -17,6 +17,7 @@
 <script src="${ctx}resources/vendors/jquery-confirm/dist/jquery-confirm.min.js"></script>
 <!-- cropperjs -->
 <script src="${ctx}resources/vendors/cropperjs/dist/cropper.min.js"></script>
+<<<<<<< HEAD
 <!-- canvas-to-blob -->
 <script src="${ctx}resources/js/canvas-to-blob.min.js"></script>
 <!-- cropperjs -->
@@ -44,4 +45,8 @@
     };
 </script>
 
+=======
+
+<script src="${ctx}resources/js/canvas-to-blob.min.js"></script>
+>>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
 

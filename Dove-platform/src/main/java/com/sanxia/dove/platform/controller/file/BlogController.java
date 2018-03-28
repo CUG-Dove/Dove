@@ -2,6 +2,7 @@ package com.sanxia.dove.platform.controller.file;
 
 import com.sanxia.dove.platform.core.utils.PropertiesUtils;
 import com.sanxia.dove.platform.dto.ImgJson;
+import com.sanxia.dove.platform.service.FileService;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +22,10 @@ import java.io.File;
 @RequestMapping(value = "/Blog")
 public class BlogController {
     @Autowired
-    HttpServletRequest request;
+    private HttpServletRequest request;
+    @Autowired
+    private FileService fileService;
+
     private final org.slf4j.Logger logger = LoggerFactory.getLogger(this.getClass());
     @RequestMapping("/WritePage")
     public String WriteBlob(){
@@ -32,8 +36,14 @@ public class BlogController {
     @RequestMapping(value = "/doUploadBlog",method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
     public String UploadBlog(String html){
+        long writer_id = 3;
         logger.info(html);
-        return html;
+        boolean b = fileService.createBlog(writer_id,html);
+        if(b){
+            return "SUCCESS";
+        }else{
+            return "FAILED";
+        }
     }
 
     @RequestMapping(value = "/doUploadImg",produces = {"application/json;charset=UTF-8"})

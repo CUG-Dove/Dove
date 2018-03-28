@@ -15,40 +15,49 @@
     <title>File Scan</title>
     <meta http-equiv="x-pjax-version" >
     <%@ include file="/WEB-INF/common/head.jsp" %>
-
+    <link href="${ctx}resources/css/file-blog-common.css" rel="stylesheet">
 </head>
 <body>
 <%@ include file="/WEB-INF/common/top_logined.jsp" %>
-<div class="content">
-    <div class="content-left">
-
+<div class="application-main"  role="main">
+    <div class="container main-top">
+        <div><h1>username</h1></div>
     </div>
-    <div class="content-right">
-        <div class="pjax_loading"></div>
-        <div id="ShowDir"></div>
-        <c:forEach var="file" items="${files.directaryNames}">
-            <p>文件夹:<a href="${file.value}${file.key}/"> ${file.key}</a></p>
-        </c:forEach>
+    <div class="container main-mid">
+        <div class="">
 
-        <c:forEach var="file" items="${files.fileNames}">
-            <p>文件:<a href="${file.value}${file.key}"> ${file.key}</a></p>
-        </c:forEach>
+        </div>
+        <div class="">
+            <table class="table table-hover content-table show-table">
+                <col width="10px"/>
+                <col width="50px"/>
+                <col width="200px"/>
+                <tbody>
+                <c:forEach var="dir" items="${files.directaryNames}">
+                    <tr class="Dir-item">
+                        <td class="File-icon"><span class="glyphicon glyphicon-folder-close"></span></td>
+                        <td class="File-name"><a href="${dir.value}/${dir.key}"> ${dir.key}</a></td>
+                        <td class="File-brief">***</td>
+                        <td class="File-create-time">2018-3-22 16:46:58</td>
+                    </tr>
+                </c:forEach>
+
+                <c:forEach var="file" items="${files.fileNames}">
+                    <tr class="File-item">
+                        <td class="File-icon" ><span class="glyphicon glyphicon-file"></span></td>
+                        <td class="File-name"><a href="${file.value}/${file.key}"> ${file.key}</a></td>
+                        <td class="File-brief">***</td>
+                        <td class="File-Create-time">2018-3-22 16:47:06</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </div>
 <%@ include file="/WEB-INF/common/script.jsp" %>
-<script type="text/javascript" src="/resources/js/jquery.pjax.js"></script>
-<script>
-    $(function () {
-        $().pjax('a[target!=_blank]', '#ShowDir', {fragment: '#ShowDir',version:'jxjxj', timeout: 8000,type: "POST"});
-        $().on('pjax:send', function () { //pjax链接点击后显示加载动画；
-            $(".pjax_loading").css("display", "block");
-        });
-        $().on('pjax:complete', function () { //pjax链接加载完成后隐藏加载动画；
-            $(".pjax_loading").css("display", "none");
-        });
-    })
-</script>
+
 
 </body>
 </html>

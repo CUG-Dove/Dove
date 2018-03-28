@@ -1,6 +1,7 @@
 package com.sanxia.dove.platform.controller.file;
 
 
+import com.sanxia.dove.platform.core.utils.PropertiesUtils;
 import com.sanxia.dove.platform.dto.FileStorer;
 import com.sanxia.dove.platform.service.FileService;
 import org.slf4j.LoggerFactory;
@@ -17,7 +18,6 @@ import javax.servlet.http.HttpServletRequest;
  * Created by zy on 2018/3/2.
  */
 @Controller
-@RequestMapping("/Dove")
 public class FileController {
     private final org.slf4j.Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
@@ -43,23 +43,24 @@ public class FileController {
         if (request.getHeader("x-pjax-version") == null) {
             logger.info("NULL");
         }
-        //获取路径
-        StringBuffer requestURL = request.getRequestURL(); //整个URL
-        if(requestURL.charAt(requestURL.length()-1) !='/'){
-            requestURL.append('/');
-        }
-        String servletPath = request.getServletPath();    //去掉localhost:8080的部分
 
+
+        String servletPath = request.getServletPath();    //去掉localhost:8080的部分
+        String url  = servletPath;
+        if(servletPath.charAt(0)=='/') {
+            servletPath = servletPath.replaceFirst("/", "");
+        }
         //拼凑resources文件夹路径
-        String path = "E:/"+servletPath;
+        String path = PropertiesUtils.getProperty("FILE_DISK_PATH")+servletPath;
+
         logger.info(path);
-        FileStorer fileStorer = fileService.getFloderDir(path,requestURL.toString());
+        FileStorer fileStorer = fileService.getFloderDir(path,url);
 
         model.addAttribute("files",fileStorer);
         return "file/index";
     }
 
-    @RequestMapping(value = "/{username}/Floder/**",method = RequestMethod.POST)
+  /*  @RequestMapping(value = "/{username}/Floder2/**")
     @ResponseBody
     public String Ergodicfile2(String username,String nowFloder,Model model) {
         if (username == "" || username == null) {
@@ -79,7 +80,7 @@ public class FileController {
         String html = fileService.getFloderDir2(path,requestURL.toString());
 
         return html;
-    }
+    }*/
 
     /***
      * 显示文件内容
@@ -90,9 +91,12 @@ public class FileController {
     @RequestMapping("/{username}/Blob/**")
     public String shouFile(String username,Model model){
         String servletPath = request.getServletPath();    //去掉localhost:8080的部分
-
+        String url  = servletPath;
+        if(servletPath.charAt(0)=='/') {
+            servletPath = servletPath.replaceFirst("/", "");
+        }
         //拼凑resources文件夹路径
-        String path = "E:"+servletPath;
+        String path = PropertiesUtils.getProperty("FILE_DISK_PATH")+servletPath;
         FileStorer fileStorer = fileService.showFile(path.replaceFirst("Blob","Floder"));
         logger.info(fileStorer.getFileContent());
         model.addAttribute("file",fileStorer);

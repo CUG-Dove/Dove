@@ -21,11 +21,19 @@
                         </dd>
                     </div>
                     <h3 class="menu-heading" >Personnal setting</h3>
+<<<<<<< HEAD
                     <a href="${ctx}settings/account" class="menu-item" style="text-decoration:none;" id="menu-account">Account</a>
                     <a href="${ctx}settings/profile" class="menu-item" style="text-decoration:none;" id="menu-profile">Profile</a>
                     <a href="${ctx}settings/email" class="menu-item" style="text-decoration:none;" id="menu-email">Email</a>
                     <a href="${ctx}settings/blog" class="menu-item" style="text-decoration:none;" id="menu-blog">Blog</a>
                     <a href="${ctx}settings/repositories" class="menu-item" style="text-decoration:none;" id="menu-repositories">repositories</a>
+=======
+                    <a href="${ctx}settings/account" class="menu-item">Account</a>
+                    <a href="${ctx}settings/profile" class="menu-item">Profile</a>
+                    <a href="#" class="menu-item">Email</a>
+                    <a href="#" class="menu-item">Blog</a>
+                    <a href="#" class="menu-item">repositories</a>
+>>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
                 </nav>
                 <nav class="menu">
                     <a href="#" class="menu-item" style="text-decoration:none;" id="menu-applictions">Applictions</a>

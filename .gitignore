@@ -7,3 +7,5 @@ Dove-platform/target/Dove-platform/resources/vendors/md/lib/codemirror/mode/http
 Dove-platform/target/*
 Dove-platform/src/main/webapp/WEB-INF/common/head.jsp
 *.class
+Dove-platform/target/Dove-platform/WEB-INF/classes/conf/springMVC.xml
+Dove-platform/target/Dove-platform/WEB-INF/classes/conf/springMVC.xml
