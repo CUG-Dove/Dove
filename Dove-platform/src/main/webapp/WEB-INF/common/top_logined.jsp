@@ -62,11 +62,8 @@
                         <li class="dropdown">
                             <a class="user-nav dropdown-details details-reset  d-flex pl-2 flex-items-center " data-toggle="dropdown">
                                 <a class="HeaderNavlink name mt-1" data-toggle="dropdown">
-<<<<<<< HEAD
+
                                     <img class=" float-left mr-1 img-circle"  id="avatar-top" src="${ctx}settings/showUserPicture" width="35" height="35" alt="" >
-=======
-                                    <img class=" float-left mr-1 img-circle"  src="${ctx}settings/showUserPicture" width="35" height="35" alt="" >
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
                                     <span class="dropdown-caret"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-sw">

@@ -16,10 +16,8 @@ import com.sanxia.dove.platform.core.utils.PlatformConstants;
 import com.sanxia.dove.platform.core.utils.PropertiesUtils;
 import com.sanxia.dove.platform.entity.system.User;
 import com.sanxia.dove.platform.service.UserService;
-<<<<<<< HEAD
+
 import jdk.internal.util.xml.impl.Input;
-=======
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -72,11 +70,17 @@ public class UserSettingsControl extends PlatformBaseController {
 
     @RequestMapping("/account/updatePwd")
     @ResponseBody
-    public MapDto UpdatePwd(@RequestParam(value = "username")String username,
-                            @RequestParam(value = "old_password", required = false ) String old_password,
-                            @RequestParam(value="new_password", required = false )String new_password){
+    public MapDto UpdatePwd(@RequestParam(value = "old_password", required = false ) String old_password,
+                            @RequestParam(value="new_password", required = false ) String new_password){
+        MapDto mapDto = new MapDto();
+        System.out.println("进入修改密码后台。。。");
+        if (getUser() == null) {
+            return null;
+        } else {
+            String username = getUser().getUsername();
+            return userService.updatePwd(username, old_password, new_password, getUser());
+        }
 
-        return userService.updatePwd(username, old_password, new_password, getUser());
     }
 
     @RequestMapping("/profile/updateProfile")

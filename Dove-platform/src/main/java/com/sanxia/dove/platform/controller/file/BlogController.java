@@ -1,5 +1,6 @@
 package com.sanxia.dove.platform.controller.file;
 
+import com.sanxia.dove.platform.core.controller.PlatformBaseController;
 import com.sanxia.dove.platform.core.utils.PropertiesUtils;
 import com.sanxia.dove.platform.dto.ImgJson;
 import com.sanxia.dove.platform.service.FileService;
@@ -20,7 +21,7 @@ import java.io.File;
  */
 @Controller
 @RequestMapping(value = "/Blog")
-public class BlogController {
+public class BlogController extends PlatformBaseController {
     @Autowired
     private HttpServletRequest request;
     @Autowired

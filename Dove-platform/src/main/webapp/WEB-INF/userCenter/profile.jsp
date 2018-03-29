@@ -16,7 +16,12 @@
 <body class="logged-out page-responsive min-width-0 f4">
 <%@ include file="/WEB-INF/common/top_logined.jsp"%>
 <div class="js-flash-container"></div>
-<div class="alert" role="alert"></div>
+<div class="alert" role="alert" id="alert" style="margin-bottom:0px">
+    <a href="#" class="close" data-dismiss="alert">
+        &times;
+    </a>
+    <strong id="alert_text" style="margin-left: 270px;"></strong>
+</div>
 <div class="application-main" role="main">
     <div id="js-pjax-container" data-pjax-container>
         <div class="page-content container clearfix">
@@ -53,10 +58,6 @@
 
                         </dl>
 
-<<<<<<< HEAD
-=======
-                        // model弹出框
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
                         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -86,7 +87,7 @@
                                 <label for="user_full_name" style="display: block;margin-bottom: 7px;cursor: default;">昵称</label>
                             </dt>
                             <dd >
-                                <input class="form-control" type="text" id=" user_full_name"  tabindex="2" name="user_full_name" placeholder="昵称">
+                                <input class="form-control" type="text" id=" user_full_name"  tabindex="2" name="user_full_name" placeholder="昵称" value="">
                             </dd>
                         </dl>
                         <dl class="form-group">
@@ -94,7 +95,7 @@
                                 <label for="user_profile_remark" >简介</label>
                             </dt>
                             <dd class="user-profile-bio-field-container">
-                                <textarea class="form-control user-profile-bio-field" cols="40" rows="20" id="user_profile_remark"   name="user_profile_remark" placeholder="请介绍自己"></textarea>
+                                <textarea class="form-control user-profile-bio-field" cols="40" rows="20" id="user_profile_remark"   name="user_profile_remark" placeholder="请介绍自己" ></textarea>
                             </dd>
                             <p class="note">
                                 你的<strong>简介信息</strong>将会被其他用户看到
@@ -105,7 +106,7 @@
                                 <label for="user_profile_url">URL</label>
                             </dt>
                             <dd >
-                                <input class="form-control" type="url" id="user_profile_url"  name="user_profile_url" size="30">
+                                <input class="form-control" type="url" id="user_profile_url"  name="user_profile_url" size="30" value="">
                             </dd>
                             <p class="note">
                                  可以填写<strong> @博客、个人主页</strong> 等URL
@@ -116,7 +117,7 @@
                                 <label for="user_profile_company">公司</label>
                             </dt>
                             <dd class="user-profile-company-field-container">
-                                <input autocomplete="off" class="form-control" type="text" id="user_profile_company"  name="user_profile_company" size="30">
+                                <input autocomplete="off" class="form-control" type="text" id="user_profile_company"  name="user_profile_company" size="30" value="">
                             </dd>
                         </dl>
                         <hr></hr>
@@ -125,7 +126,7 @@
                                 <label for="user_profile_localtion">所在地</label>
                             </dt>
                             <dd>
-                                <input class="form-control" id="user_profile_localtion" name="user_profile_localtion" size="30" type="text">
+                                <input class="form-control" id="user_profile_localtion" name="user_profile_localtion" size="30" type="text" value="">
                             </dd>
                         </dl>
                         <p>
@@ -138,168 +139,122 @@
             </div>
         </div>
     </div>
-    <!--div class="" style="width: 290px;float: right !important;border: 1px #e1e4e8 solid;padding: 20px;font-size: small;margin-top: -520px;margin-right: 10px;">
-        <div class="Subhead mt-0 mb-0" >
-            <h2 class="Subhead-heading" >xxx</h2>
-        </div>
-    </div-->
-<<<<<<< HEAD
-=======
+
 </div>
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
 </div>
 </div>
 <%@ include file="/WEB-INF/common/footer.jsp"%>
 <%@ include file="/WEB-INF/common/script.jsp"%>
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            var avatar = document.getElementById('avatar');
-            var image = document.getElementById('image');
-            var input = document.getElementById('upload-profile-picture');
-            var $alert = $('.alert');
-            var $modal = $('#modal');
-            var cropper;
-            $alert.hide();
-            input.addEventListener('change', function (e) {
-                var files = e.target.files;
-                var done = function (url) {
-                    input.value = '';
-                    image.src = url;
-                    $modal.modal('show');
-                };
-                var reader;
-                var file;
-                var url;
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        var avatar = document.getElementById('avatar');
+        var image = document.getElementById('image');
+        var input = document.getElementById('upload-profile-picture');
+        var $alert = $('.alert');
+        var $modal = $('#modal');
+        var cropper;
+        $alert.hide();
+        input.addEventListener('change', function (e) {
+            var files = e.target.files;
+            var done = function (url) {
+                input.value = '';
+                image.src = url;
+                $modal.modal('show');
+            };
+            var reader;
+            var file;
+            var url;
 
-                if (files && files.length > 0) {
-                    file = files[0];
+            if (files && files.length > 0) {
+                file = files[0];
 
-                    if (URL) {
-                        done(URL.createObjectURL(file));
-                    } else if (FileReader) {
-                        reader = new FileReader();
-                        reader.onload = function (e) {
-                            done(reader.result);
-                        };
-                        reader.readAsDataURL(file);
-                    }
+                if (URL) {
+                    done(URL.createObjectURL(file));
+                } else if (FileReader) {
+                    reader = new FileReader();
+                    reader.onload = function (e) {
+                        done(reader.result);
+                    };
+                    reader.readAsDataURL(file);
                 }
-            });
-            $modal.on('shown.bs.modal', function () {
-                cropper = new Cropper(image, {
-                    aspectRatio: 1,
-                    viewMode: 3,
-                });
-            }).on('hidden.bs.modal', function () {
-                cropper.destroy();
-                cropper = null;
-            });
-
-            document.getElementById('crop').addEventListener('click', function () {
-                var initialAvatarURL;
-                var canvas;
-
-<<<<<<< HEAD
-=======
-<%@ include file="/WEB-INF/common/script.jsp"%>
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            var avatar = document.getElementById('avatar');
-            var image = document.getElementById('image');
-            var input = document.getElementById('upload-profile-picture');
-            var $alert = $('.alert');
-            var $modal = $('#modal');
-            var cropper;
-            input.addEventListener('change', function (e) {
-                var files = e.target.files;
-                var done = function (url) {
-                    input.value = '';
-                    image.src = url;
-                    $alert.hide();
-                    $modal.modal('show');
-                };
-                var reader;
-                var file;
-                var url;
-
-                if (files && files.length > 0) {
-                    file = files[0];
-
-                    if (URL) {
-                        done(URL.createObjectURL(file));
-                    } else if (FileReader) {
-                        reader = new FileReader();
-                        reader.onload = function (e) {
-                            done(reader.result);
-                        };
-                        reader.readAsDataURL(file);
-                    }
-                }
-            });
-            $modal.on('shown.bs.modal', function () {
-                cropper = new Cropper(image, {
-                    aspectRatio: 1,
-                    viewMode: 3,
-                });
-            }).on('hidden.bs.modal', function () {
-                cropper.destroy();
-                cropper = null;
-            });
-
-            document.getElementById('crop').addEventListener('click', function () {
-                var initialAvatarURL;
-                var canvas;
-
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
-                $modal.modal('hide');
-
-                if (cropper) {
-                    canvas = cropper.getCroppedCanvas({
-                        width: 160,
-                        height: 160,
-                    });
-
-                    initialAvatarURL = avatar.src;
-                    avatar.src = canvas.toDataURL();
-                    $alert.removeClass('alert-success alert-warning');
-
-                    canvas.toBlob(function (blob) {
-                        var formData = new FormData();
-                        formData.append('avatar', blob);
-
-                        $.ajax({
-                            url:'${ctx}settings/profile/updateUserPicture',
-                            method: 'POST',
-                            data: formData,
-                            processData: false,
-                            contentType: false,
-                            success: function (result) {
-<<<<<<< HEAD
-                                document.getElementById('avatar-top').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
-=======
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
-                                document.getElementById('avatar-left').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
-                                        $alert.show().addClass('alert-success').text('Upload success');
-                            },
-                            error: function (result) {
-                                avatar.src = initialAvatarURL;
-                                $alert.show().addClass('alert-warning').text('Upload error');
-                            },
-                            complete: function () {
-
-                            },
-                        });
-
-                    });
-                }
-            });
+            }
         });
-<<<<<<< HEAD
+        $modal.on('shown.bs.modal', function () {
+            cropper = new Cropper(image, {
+                aspectRatio: 1,
+                viewMode: 3,
+            });
+        }).on('hidden.bs.modal', function () {
+            cropper.destroy();
+            cropper = null;
+        });
 
+        document.getElementById('crop').addEventListener('click', function () {
+            var initialAvatarURL;
+            var canvas;
 
-=======
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
-    </script>
+            $modal.modal('hide');
+
+            if (cropper) {
+                canvas = cropper.getCroppedCanvas({
+                    width: 160,
+                    height: 160,
+                });
+
+                initialAvatarURL = avatar.src;
+                avatar.src = canvas.toDataURL();
+                $alert.removeClass('alert-success alert-warning');
+
+                canvas.toBlob(function (blob) {
+                    var formData = new FormData();
+                    formData.append('avatar', blob);
+
+                    $.ajax({
+                        url:'${ctx}settings/profile/updateUserPicture',
+                        method: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (result) {
+                            document.getElementById('avatar-top').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
+                            document.getElementById('avatar-left').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
+                            $alert.show().addClass('alert alert-success');
+                            $('#alert_text').text('Congratulation！修改成功.');
+                        },
+                        error: function (result) {
+                            avatar.src = initialAvatarURL;
+                            $alert.show().addClass('alert-warning').text('头像上传失败.');
+                        },
+                        complete: function () {
+
+                        },
+                    });
+
+                });
+            }
+        });
+    });
+
+    function updateProfile() {
+        var $alert = $('.alert');
+        $.ajax({
+            url:'${ctx}settings/profile/updateProfile?time=' + new Date().getTime(),
+            type:'POST',
+            data:$('#user_profile').serialize(),
+            dataType:'json',
+            success:function (result) {
+                $("input[type='password']").val('');
+                $alert.show().addClass('alert alert-success');
+                $('#alert_text').text('Congratulation！修改成功.');
+            },
+            error: function () {
+                $alert.show().addClass('alert alert-warning');
+                $('#alert_text').text('Sorry！修改失败.');
+            }
+        });
+    }
+
+</script>
 </body>
 
 </html>

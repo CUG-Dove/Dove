@@ -14,6 +14,12 @@
 </head>
 <body class="logged-out page-responsive min-width-0 f4">
 <%@ include file="/WEB-INF/common/top_logined.jsp"%>
+    <div class="alert" role="alert" id="alert" style="margin-bottom:0px">
+        <a href="#" class="close" data-dismiss="alert">
+            &times;
+        </a>
+        <strong id="alert_text" style="margin-left: 270px;"></strong>
+    </div>
     <div class="application-main" role="main">
         <div id="js-pjax-container" data-pjax-container>
             <div class="page-content container clearfix">
@@ -24,7 +30,7 @@
                         <div class="Subhead mt-0 mb-0" >
                             <h2 class="Subhead-heading" >修改密码</h2>
                         </div>
-                        <form accept-charset="UTF-8" action="#" class="eidt_user" id="change_password" method="post">
+                        <form accept-charset="UTF-8"  class="eidt_user"  id="updatePwd_form">
                             <!--div style="margin:0;padding: 0;display: inline;">
                                 <input type="text" name="" id="">
                             </div-->
@@ -33,7 +39,7 @@
                                     <label for="user_old_password" style="display: block;margin-bottom: 7px;cursor: default;">原来的密码</label>
                                 </dt>
                                 <dd >
-                                    <input class="form-control form-control" type="password" id=" user_old_password" required="required" tabindex="2" name="old_password">
+                                    <input class="form-control form-control" type="password" id="user_old_password" required="required" tabindex="2" name="old_password">
                                 </dd>
                             </dl>
                             <dl class="form-group password-confirmation-form">
@@ -41,7 +47,7 @@
                                     <label for="user_new_password" style="display: block;margin-bottom: 7px;cursor: default;">新的密码</label>
                                 </dt>
                                 <dd >
-                                    <input class="form-control form-control" type="password" id=" user_new_password" required="required" tabindex="2" name="new_password">
+                                    <input class="form-control form-control" type="password" id="user_new_password" required="required" tabindex="2" name="new_password">
                                 </dd>
                             </dl>
                             <dl class="form-group password-confirmation-form">
@@ -49,11 +55,11 @@
                                     <label for="user_confirm_new_password">再次输入新密码</label>
                                 </dt>
                                 <dd >
-                                    <input class="form-control form-control" type="password" id=" user_confirm_new_password" required="required" tabindex="2" name="confirm_new_password">
+                                    <input class="form-control form-control" type="password" id="user_confirm_new_password" required="required" tabindex="2" name="confirm_new_password">
                                 </dd>
                             </dl>
                             <p>
-                                <button class="btn btn-default mr-2" style="background-color: #eff3f6;background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);width: 130px;" type="submit">修改密码</button>
+                                <button class="btn btn-default mr-2" id="updatePwd" type="button" onclick="update();" style="background-color: #eff3f6;background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);width: 130px;" >修改密码</button>
                                 <span>
                                     <a href="#" style="font-size: 12px;font-weight: 600">忘记密码？</a>
                                 </span>
@@ -85,6 +91,32 @@
 
 <%@ include file="/WEB-INF/common/footer.jsp"%>
 <%@ include file="/WEB-INF/common/script.jsp"%>
+
+<script>
+    var $alert = $('.alert');
+    $alert.hide();
+
+
+    function update(){
+        $.ajax({
+            url: '${ctx}settings/account/updatePwd?time=' + new Date().getTime(),
+            type: 'POST',
+            dataType: 'json',
+            data:$("#updatePwd_form").serialize(),
+            success:function (result) {
+                $("input[type='password']").val('');
+                $alert.show().addClass('alert alert-success');
+                $('#alert_text').text('Congratulation！修改成功.');
+            },
+            error: function () {
+                $alert.show().addClass('alert alert-warning');
+                $('#alert_text').text('Sorry！修改失败.');
+            }
+        });
+    }
+
+</script>
+
 </body>
 
 </html>

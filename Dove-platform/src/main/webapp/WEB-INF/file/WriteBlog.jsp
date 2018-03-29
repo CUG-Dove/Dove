@@ -7,29 +7,31 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="/WEB-INF/common/taglib.jsp" %>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <title>写日志</title>
-    <%@ include file="common/head.jsp" %>
-    <style type="text/css">
-
-    </style>
+    <%@ include file="/WEB-INF/common/head.jsp"%>
+    <%@ include file="/WEB-INF/file/common/head.jsp"%>
 </head>
-<body>
-<div id="layout">
+
+<body class="min-width-0">
     <%@ include file="/WEB-INF/common/top_logined.jsp"%>
-    <header>
-        <h1>Blog编辑器</h1>
-    </header>
-    <input type="submit" value="提交" onclick="submit_blog()"/>
-    <div id="test-editormd">
-        <textarea style="display:none;" class="editormd-html-textarea" id="editormd"></textarea>
-        <textarea class="editormd-html-textarea" name="text" id="editormdhtml"></textarea>
-        </textarea>
+    <div id="layout">
+        <header>
+            <h1>Blog编辑器</h1>
+        </header>
+        <input type="submit" value="提交" onclick="submit_blog()"/>
+        <div id="test-editormd">
+            <textarea style="display:none;" class="editormd-html-textarea" id="editormd"></textarea>
+            <textarea class="editormd-html-textarea" name="text" id="editormdhtml"></textarea>
+            </textarea>
+        </div>
+
     </div>
 
-</div>
-
+    <%@ include file="/WEB-INF/common/footer.jsp"%>
+    <%@ include file="/WEB-INF/common/script.jsp"%>
 <script type="text/javascript">
     var testEditor;
 

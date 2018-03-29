@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<base href="${ctx}" />
+<base href="${ctx}"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta http-equiv="pragma" content="no-cache"/>
 <meta http-equiv="cache-control" content="no-cache"/>
@@ -27,11 +27,8 @@
 <link href="${ctx}resources/css/custom.css" rel="stylesheet">
 <!-- cropperjs-->
 <link href="${ctx}resources/vendors/cropperjs/dist/cropper.min.css" rel="stylesheet">
-<<<<<<< HEAD
 <!-- Font-Awesome-3.2.1-->
 <link href="${ctx}resources/vendors/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
 <!-- Font-Awesome-3.2.1-->
 <link href="${ctx}resources/vendors/swiper-4.1.6/dist/css/swiper.min.css" rel="stylesheet">
 
-=======
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7

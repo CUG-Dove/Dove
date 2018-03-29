@@ -17,7 +17,6 @@
 <script src="${ctx}resources/vendors/jquery-confirm/dist/jquery-confirm.min.js"></script>
 <!-- cropperjs -->
 <script src="${ctx}resources/vendors/cropperjs/dist/cropper.min.js"></script>
-<<<<<<< HEAD
 <!-- canvas-to-blob -->
 <script src="${ctx}resources/js/canvas-to-blob.min.js"></script>
 <!-- cropperjs -->
@@ -31,22 +30,9 @@
     var str = '#menu-' + thisUrl;
     window.onload = function () {
         $(str).addClass('selected');
-        /*if (window.location.href == menu_url+"settings/account"){
-            $('#menu-account').addClass('selected');
-        }else if(window.location.href == menu_url+"settings/profile"){
-            $('#menu-profile').addClass('selected');
-        }else if (window.location.href == menu_url+"settings/email"){
-            $('#menu-email').addClass('selected');
-        }else if(window.location.href == menu_url+"settings/blog") {
-            $('#menu-blog').addClass('selected');
-        }else if(window.location.href == menu_url+"settings/repositories") {
-            $('#menu-repositories').addClass('selected');
-        }*/
     };
 </script>
 
-=======
 
 <script src="${ctx}resources/js/canvas-to-blob.min.js"></script>
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
 
