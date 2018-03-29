@@ -10,24 +10,30 @@
 <html>
 <head>
     <title>写日志</title>
+    <%@ include file="/WEB-INF/common/head.jsp" %>
     <%@ include file="common/head.jsp" %>
-    <style type="text/css">
+    <link href="${ctx}resources/css/file-blog-common.css" rel="stylesheet">
 
-    </style>
 </head>
 <body>
 <div id="layout">
-    <%@ include file="/WEB-INF/common/top_logined.jsp"%>
-    <header>
-        <h1>Blog编辑器</h1>
-    </header>
-    <input type="submit" value="提交" onclick="submit_blog()"/>
-    <div id="test-editormd">
-        <textarea style="display:none;" class="editormd-html-textarea" id="editormd"></textarea>
-        <textarea class="editormd-html-textarea" name="text" id="editormdhtml"></textarea>
-        </textarea>
-    </div>
+    <%@ include file="/WEB-INF/common/top_logined.jsp" %>
+    <div class="application-main" role="main">
+        <div class="container">
+            <div class="">
 
+            </div>
+            <div class="form-Blog-Writing pos-right">
+                <div class="title"><input class="form-control" type="text" placeholder="请输入标题名称"></div>
+                <div class="test-editormd" id="test-editormd">
+                    <textarea style="display:none;" class="editormd-html-textarea" id="editormd"></textarea>
+                    <textarea class="editormd-html-textarea" name="text" id="editormdhtml"></textarea>
+                    </textarea>
+                </div>
+                <button class="btn-info" onclick="submit_blog()">提交</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -35,8 +41,8 @@
 
     $(function () {
         testEditor = editormd("test-editormd", {
-            width: "90%",
-            height: 600,
+            width: "95%",
+            height: "80%",
             path: "/resources/vendors/md/lib/",
             imageUpload: true,
             imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
@@ -50,7 +56,7 @@
         alert(htmlco);
         $.ajax(
             {
-                data: {'html': htmlco},
+                data: {'html': htmlco, 'title': "123"},
                 dataType: 'text',
                 success: function (data) {
                     alert(data);

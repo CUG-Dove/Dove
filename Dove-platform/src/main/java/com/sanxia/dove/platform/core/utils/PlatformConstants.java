@@ -32,6 +32,11 @@ public class PlatformConstants implements ApplicationContextAware{
     //图片安全地址
     public static final String IMG_SECURITY_PATH = PropertiesUtils.getProperty("IMG_SECURITY_PATH");
 
+    //物理路径
+    public static final String FILE_DISK_PATH = PropertiesUtils.getProperty("FILE_DISK_PATH");
+
+    //相对路径
+    public static final String FILE_RELATIVELY_PATH = PropertiesUtils.getProperty("FILE_RELATIVELY_PATH");
     /**
      * 图片文件格式限制
      */

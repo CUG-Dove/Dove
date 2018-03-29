@@ -1041,7 +1041,7 @@ edit-profile-avatar {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-<<<<<<< HEAD
+
 }
 
 .text-small {
@@ -1308,6 +1308,5 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
 
 .h3 {
         font-size: 18px !important;
-=======
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
+
 }

@@ -53,10 +53,9 @@
 
                         </dl>
 
-<<<<<<< HEAD
-=======
+
                         // model弹出框
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
+
                         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -143,10 +142,9 @@
             <h2 class="Subhead-heading" >xxx</h2>
         </div>
     </div-->
-<<<<<<< HEAD
-=======
+
 </div>
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
+
 </div>
 </div>
 <%@ include file="/WEB-INF/common/footer.jsp"%>
@@ -199,8 +197,6 @@
                 var initialAvatarURL;
                 var canvas;
 
-<<<<<<< HEAD
-=======
 <%@ include file="/WEB-INF/common/script.jsp"%>
     <script>
         window.addEventListener('DOMContentLoaded', function () {
@@ -250,7 +246,7 @@
                 var initialAvatarURL;
                 var canvas;
 
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
+
                 $modal.modal('hide');
 
                 if (cropper) {
@@ -274,10 +270,9 @@
                             processData: false,
                             contentType: false,
                             success: function (result) {
-<<<<<<< HEAD
+
                                 document.getElementById('avatar-top').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
-=======
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
+
                                 document.getElementById('avatar-left').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
                                         $alert.show().addClass('alert-success').text('Upload success');
                             },
@@ -294,11 +289,7 @@
                 }
             });
         });
-<<<<<<< HEAD
 
-
-=======
->>>>>>> c4b8369e6674836e2a540b4f214ca2932023eae7
     </script>
 </body>
 
