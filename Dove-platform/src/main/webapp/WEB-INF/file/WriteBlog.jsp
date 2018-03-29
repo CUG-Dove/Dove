@@ -11,6 +11,7 @@
 <html lang="en">
 <head>
     <title>写日志</title>
+<<<<<<< HEAD
     <%@ include file="/WEB-INF/common/head.jsp"%>
     <%@ include file="/WEB-INF/file/common/head.jsp"%>
 </head>
@@ -29,6 +30,33 @@
         </div>
 
     </div>
+=======
+    <%@ include file="/WEB-INF/common/head.jsp" %>
+    <%@ include file="common/head.jsp" %>
+    <link href="${ctx}resources/css/file-blog-common.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="layout">
+    <%@ include file="/WEB-INF/common/top_logined.jsp" %>
+    <div class="application-main" role="main">
+        <div class="container">
+            <div class="">
+
+            </div>
+            <div class="form-Blog-Writing pos-right">
+                <div class="title"><input class="form-control" type="text" placeholder="请输入标题名称"></div>
+                <div class="test-editormd" id="test-editormd">
+                    <textarea style="display:none;" class="editormd-html-textarea" id="editormd"></textarea>
+                    <textarea class="editormd-html-textarea" name="text" id="editormdhtml"></textarea>
+                    </textarea>
+                </div>
+                <button class="btn-info" onclick="submit_blog()">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+>>>>>>> 5da5e5da0b0619b001219e6db55ac7e58fcc7c77
 
     <%@ include file="/WEB-INF/common/footer.jsp"%>
     <%@ include file="/WEB-INF/common/script.jsp"%>
@@ -37,8 +65,8 @@
 
     $(function () {
         testEditor = editormd("test-editormd", {
-            width: "90%",
-            height: 600,
+            width: "95%",
+            height: "80%",
             path: "/resources/vendors/md/lib/",
             imageUpload: true,
             imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
@@ -52,7 +80,7 @@
         alert(htmlco);
         $.ajax(
             {
-                data: {'html': htmlco},
+                data: {'html': htmlco, 'title': "123"},
                 dataType: 'text',
                 success: function (data) {
                     alert(data);

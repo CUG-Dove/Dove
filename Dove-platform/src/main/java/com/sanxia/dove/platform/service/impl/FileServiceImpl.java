@@ -160,7 +160,7 @@ public class FileServiceImpl implements FileService {
      * @return
      */
     @Override
-    public boolean createBlog(long writerId, String content) {
+    public boolean createBlog(long writerId,String title, String content) {
         SimpleDateFormat format = new SimpleDateFormat("yyyyMMddHHmmss");
         Date now = new Date();
         long ID = Long.parseLong(format.format(now));
@@ -170,13 +170,20 @@ public class FileServiceImpl implements FileService {
         int disagrees = 0;
         int reviews = 0;
         String isDelete = "0";
-        Blog blog = new Blog(ID,writerId,content.getBytes(),createTime,createTime,createTime,isDelete,agrees,disagrees,reviews);
+        String isDraft="0";
+        Blog blog = new Blog(ID,writerId,title,content.getBytes(),createTime,createTime,createTime,isDelete,agrees,disagrees,reviews,isDraft);
         int res = blogMapper.insertBlog(blog);
         if(res > 0){
             return true;
         }else{
             return false;
         }
+    }
+
+    @Override
+    public List<Blog> getUserBlogs(long writerId) {
+        List<Blog> blogs = blogMapper.getUserBlogs(writerId);
+        return blogs;
     }
 
 }

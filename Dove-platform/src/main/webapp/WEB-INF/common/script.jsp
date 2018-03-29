@@ -17,6 +17,10 @@
 <script src="${ctx}resources/vendors/jquery-confirm/dist/jquery-confirm.min.js"></script>
 <!-- cropperjs -->
 <script src="${ctx}resources/vendors/cropperjs/dist/cropper.min.js"></script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5da5e5da0b0619b001219e6db55ac7e58fcc7c77
 <!-- canvas-to-blob -->
 <script src="${ctx}resources/js/canvas-to-blob.min.js"></script>
 <!-- cropperjs -->
@@ -33,6 +37,10 @@
     };
 </script>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5da5e5da0b0619b001219e6db55ac7e58fcc7c77
 
 <script src="${ctx}resources/js/canvas-to-blob.min.js"></script>
 

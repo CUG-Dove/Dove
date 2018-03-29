@@ -27,8 +27,16 @@
 <link href="${ctx}resources/css/custom.css" rel="stylesheet">
 <!-- cropperjs-->
 <link href="${ctx}resources/vendors/cropperjs/dist/cropper.min.css" rel="stylesheet">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5da5e5da0b0619b001219e6db55ac7e58fcc7c77
 <!-- Font-Awesome-3.2.1-->
 <link href="${ctx}resources/vendors/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet">
 <!-- Font-Awesome-3.2.1-->
 <link href="${ctx}resources/vendors/swiper-4.1.6/dist/css/swiper.min.css" rel="stylesheet">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5da5e5da0b0619b001219e6db55ac7e58fcc7c77

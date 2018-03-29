@@ -21,7 +21,10 @@
                         </dd>
                     </div>
                     <h3 class="menu-heading" >Personnal setting</h3>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5da5e5da0b0619b001219e6db55ac7e58fcc7c77
                     <a href="${ctx}settings/account" class="menu-item" style="text-decoration:none;" id="menu-account">Account</a>
                     <a href="${ctx}settings/profile" class="menu-item" style="text-decoration:none;" id="menu-profile">Profile</a>
                     <a href="${ctx}settings/email" class="menu-item" style="text-decoration:none;" id="menu-email">Email</a>
@@ -33,7 +36,10 @@
                     <a href="#" class="menu-item">Email</a>
                     <a href="#" class="menu-item">Blog</a>
                     <a href="#" class="menu-item">repositories</a>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5da5e5da0b0619b001219e6db55ac7e58fcc7c77
                 </nav>
                 <nav class="menu">
                     <a href="#" class="menu-item" style="text-decoration:none;" id="menu-applictions">Applictions</a>

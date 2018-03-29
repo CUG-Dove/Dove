@@ -1,6 +1,7 @@
 package com.sanxia.dove.platform.controller.file;
 
 
+import com.sanxia.dove.platform.core.controller.PlatformBaseController;
 import com.sanxia.dove.platform.core.utils.PropertiesUtils;
 import com.sanxia.dove.platform.dto.FileStorer;
 import com.sanxia.dove.platform.service.FileService;
@@ -18,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by zy on 2018/3/2.
  */
 @Controller
-public class FileController {
+public class FileController extends PlatformBaseController {
     private final org.slf4j.Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     FileService fileService;

@@ -41,6 +41,7 @@
             </c:choose>
         </div>
     </div>
+</div>
     <script type="text/javascript">
         var testEditor;
         $(function () {

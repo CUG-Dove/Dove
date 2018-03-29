@@ -64,6 +64,10 @@
                                 <a class="HeaderNavlink name mt-1" data-toggle="dropdown">
 
                                     <img class=" float-left mr-1 img-circle"  id="avatar-top" src="${ctx}settings/showUserPicture" width="35" height="35" alt="" >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5da5e5da0b0619b001219e6db55ac7e58fcc7c77
                                     <span class="dropdown-caret"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-sw">

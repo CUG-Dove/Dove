@@ -8,6 +8,8 @@ public class Blog {
     private long id;
     //作者ID
     private long writerId;
+    //标题
+    private String title;
     //内容
     private byte[] content;
     //发布时间
@@ -24,6 +26,16 @@ public class Blog {
     private int disagrees;
     //评论数
     private int reviews;
+    //是否是草稿
+    private String isDraft;
+
+    public String getIsDraft() {
+        return isDraft;
+    }
+
+    public void setIsDraft(String isDraft) {
+        this.isDraft = isDraft;
+    }
 
     public long getId() {
         return id;
@@ -105,19 +117,29 @@ public class Blog {
         this.reviews = reviews;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public Blog() {
     }
 
-    public Blog(long id, long writerId, byte[] content, String createTime, String lastModiTime, String deleteTime, String isDelete, int agrees, int disgrees, int reviews) {
+    public Blog(long id, long writerId, String title, byte[] content, String createTime, String lastModiTime, String deleteTime, String isDelete, int agrees, int disagrees, int reviews, String isDraft) {
         this.id = id;
         this.writerId = writerId;
+        this.title = title;
         this.content = content;
         this.createTime = createTime;
         this.lastModiTime = lastModiTime;
         this.deleteTime = deleteTime;
         this.isDelete = isDelete;
         this.agrees = agrees;
-        this.disagrees = disgrees;
+        this.disagrees = disagrees;
         this.reviews = reviews;
+        this.isDraft = isDraft;
     }
 }

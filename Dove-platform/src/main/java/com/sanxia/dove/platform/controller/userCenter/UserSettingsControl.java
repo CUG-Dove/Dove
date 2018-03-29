@@ -17,7 +17,10 @@ import com.sanxia.dove.platform.core.utils.PropertiesUtils;
 import com.sanxia.dove.platform.entity.system.User;
 import com.sanxia.dove.platform.service.UserService;
 
+<<<<<<< HEAD
 import jdk.internal.util.xml.impl.Input;
+=======
+>>>>>>> 5da5e5da0b0619b001219e6db55ac7e58fcc7c77
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

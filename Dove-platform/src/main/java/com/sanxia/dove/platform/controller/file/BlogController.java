@@ -36,10 +36,10 @@ public class BlogController extends PlatformBaseController {
 
     @RequestMapping(value = "/doUploadBlog",method = RequestMethod.POST, produces = {"application/json;charset=UTF-8"})
     @ResponseBody
-    public String UploadBlog(String html){
+    public String UploadBlog(String html,String title){
         long writer_id = 3;
         logger.info(html);
-        boolean b = fileService.createBlog(writer_id,html);
+        boolean b = fileService.createBlog(writer_id,title,html);
         if(b){
             return "SUCCESS";
         }else{
