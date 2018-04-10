@@ -32,7 +32,7 @@
                     <div class="Subhead mt-0 mb-0" >
                         <h2 class="Subhead-heading" >我的资料</h2>
                     </div>
-                    <form accept-charset="UTF-8"  class="columns js-uploadable-container js-upload-avatar-image is-default" id="user_profile" method="post">
+                    <form accept-charset="UTF-8"  class="columns js-uploadable-container js-upload-avatar-image is-default" id="user_profile_form" method="post">
                         <!--div style="margin:0;padding: 0;display: inline;">
                             <input type="text" name="" id="">
                         </div-->
@@ -141,106 +141,115 @@
     </div>
 
 </div>
+    <!--div class="" style="width: 290px;float: right !important;border: 1px #e1e4e8 solid;padding: 20px;font-size: small;margin-top: -520px;margin-right: 10px;">
+        <div class="Subhead mt-0 mb-0" >
+            <h2 class="Subhead-heading" >xxx</h2>
+        </div>
+    </div-->
+
+</div>
+
 </div>
 </div>
 <%@ include file="/WEB-INF/common/footer.jsp"%>
 <%@ include file="/WEB-INF/common/script.jsp"%>
-<script>
-    window.addEventListener('DOMContentLoaded', function () {
-        var avatar = document.getElementById('avatar');
-        var image = document.getElementById('image');
-        var input = document.getElementById('upload-profile-picture');
-        var $alert = $('.alert');
-        var $modal = $('#modal');
-        var cropper;
-        $alert.hide();
-        input.addEventListener('change', function (e) {
-            var files = e.target.files;
-            var done = function (url) {
-                input.value = '';
-                image.src = url;
-                $modal.modal('show');
-            };
-            var reader;
-            var file;
-            var url;
-
-            if (files && files.length > 0) {
-                file = files[0];
-
-                if (URL) {
-                    done(URL.createObjectURL(file));
-                } else if (FileReader) {
-                    reader = new FileReader();
-                    reader.onload = function (e) {
-                        done(reader.result);
+    <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                var avatar = document.getElementById('avatar');
+                var image = document.getElementById('image');
+                var input = document.getElementById('upload-profile-picture');
+                var $alert = $('.alert');
+                var $modal = $('#modal');
+                var cropper;
+                $alert.hide();
+                input.addEventListener('change', function (e) {
+                    var files = e.target.files;
+                    var done = function (url) {
+                        input.value = '';
+                        image.src = url;
+                        $modal.modal('show');
                     };
-                    reader.readAsDataURL(file);
-                }
-            }
-        });
-        $modal.on('shown.bs.modal', function () {
-            cropper = new Cropper(image, {
-                aspectRatio: 1,
-                viewMode: 3,
-            });
-        }).on('hidden.bs.modal', function () {
-            cropper.destroy();
-            cropper = null;
-        });
+                    var reader;
+                    var file;
+                    var url;
 
-        document.getElementById('crop').addEventListener('click', function () {
-            var initialAvatarURL;
-            var canvas;
+                    if (files && files.length > 0) {
+                        file = files[0];
 
-            $modal.modal('hide');
-
-            if (cropper) {
-                canvas = cropper.getCroppedCanvas({
-                    width: 160,
-                    height: 160,
+                        if (URL) {
+                            done(URL.createObjectURL(file));
+                        } else if (FileReader) {
+                            reader = new FileReader();
+                            reader.onload = function (e) {
+                                done(reader.result);
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                    }
                 });
-
-                initialAvatarURL = avatar.src;
-                avatar.src = canvas.toDataURL();
-                $alert.removeClass('alert-success alert-warning');
-
-                canvas.toBlob(function (blob) {
-                    var formData = new FormData();
-                    formData.append('avatar', blob);
-
-                    $.ajax({
-                        url:'${ctx}settings/profile/updateUserPicture',
-                        method: 'POST',
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        success: function (result) {
-                            document.getElementById('avatar-top').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
-                            document.getElementById('avatar-left').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
-                            $alert.show().addClass('alert alert-success');
-                            $('#alert_text').text('Congratulation！修改成功.');
-                        },
-                        error: function (result) {
-                            avatar.src = initialAvatarURL;
-                            $alert.show().addClass('alert-warning').text('头像上传失败.');
-                        },
-                        complete: function () {
-
-                        },
+                $modal.on('shown.bs.modal', function () {
+                    cropper = new Cropper(image, {
+                        aspectRatio: 1,
+                        viewMode: 3,
                     });
-
+                }).on('hidden.bs.modal', function () {
+                    cropper.destroy();
+                    cropper = null;
                 });
-            }
-        });
-    });
+
+                document.getElementById('crop').addEventListener('click', function () {
+                    var initialAvatarURL;
+                    var canvas;
+
+                    $modal.modal('hide');
+
+                    if (cropper) {
+                        canvas = cropper.getCroppedCanvas({
+                            width: 160,
+                            height: 160,
+                        });
+
+                        initialAvatarURL = avatar.src;
+                        avatar.src = canvas.toDataURL();
+                        $alert.removeClass('alert-success alert-warning');
+
+                        canvas.toBlob(function (blob) {
+                            var formData = new FormData();
+                            formData.append('avatar', blob);
+
+                            $.ajax({
+                                url:'${ctx}settings/profile/updateUserPicture',
+                                method: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function (result) {
+                                    document.getElementById('avatar-top').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
+                                    document.getElementById('avatar-left').src = '${ctx}settings/showUserPicture?time='+ new Date().getTime();
+                                    $alert.show().addClass('alert alert-success');
+                                    $('#alert_text').text('Congratulation！修改成功.');
+                                },
+                                error: function (result) {
+                                    avatar.src = initialAvatarURL;
+                                    $alert.show().addClass('alert alert-success');
+                                    $('#alert_text').text('Congratulation！修改失败.');
+                                },
+                                complete: function () {
+
+                                },
+                            });
+
+                        });
+                    }
+                });
+            });
 
     function updateProfile() {
         var $alert = $('.alert');
         $.ajax({
             url:'${ctx}settings/profile/updateProfile?time=' + new Date().getTime(),
             type:'POST',
-            data:$('#user_profile').serialize(),
+            data:$('#user_profile_form').serialize(),
             dataType:'json',
             success:function (result) {
                 $("input[type='password']").val('');
@@ -255,6 +264,7 @@
     }
 
 </script>
+
 </body>
 
 </html>
